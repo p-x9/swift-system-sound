@@ -16,7 +16,8 @@ Therefore, I have made it possible to play sounds by specifying the sound name.
 It was obtained by analyzing the system file.
 
 The following table shows the correspondence between swift-system-soundID and sound names.
-[Table of SytemSoundID and Sound Name](./swift-system-soundTable.md)
+
+[Table of SytemSoundID and Sound Name](./SystemSoundTable.md)
 
 ## Usage
 ### import
