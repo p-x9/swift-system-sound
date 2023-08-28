@@ -22,7 +22,7 @@ The following table shows the correspondence between swift-system-soundID and so
 ### import
 
 ```swift
-import swift-system-sound
+import SystemSound
 ```
 
 ### PlaySounds
