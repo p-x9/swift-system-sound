@@ -12,7 +12,7 @@ import SystemSound
 struct ContentView: View {
     var body: some View {
         List(SystemSoundKey.allCases, id: \.self) { key in
-            Text("\(key.name)")
+            Text("\(key.name) (\(key.rawValue))")
                 .onTapGesture {
                     AudioServicesPlaySystemSound(key)
                 }
