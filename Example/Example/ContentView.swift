@@ -17,7 +17,7 @@ struct ContentView: View {
             return SystemSoundKey.allCases
         } else {
             return SystemSoundKey.allCases.filter { key in
-                "\(key.name) \(key.rawValue)".contains(searchText)
+                key.title.contains(searchText)
             }
         }
     }
@@ -26,7 +26,12 @@ struct ContentView: View {
         NavigationView {
             List(soundKeys, id: \.self) { key in
                 HStack {
-                    Text("\(key.name) (\(key.rawValue))")
+                    VStack(alignment: .leading) {
+                        Text(key.name)
+                        Text(key.numbers)
+                            .font(.caption)
+                    }
+                    Spacer()
                 }
                 .contentShape(Rectangle())
                 .onTapGesture {
@@ -35,6 +40,15 @@ struct ContentView: View {
             }
         }
         .searchable(text: $searchText)
+    }
+}
+
+private extension SystemSoundKey {
+    var numbers: String {
+        ids.map { "\($0)" }.joined(separator: ", ")
+    }
+    var title: String {
+        return "\(name)\n(\(numbers))"
     }
 }
 
