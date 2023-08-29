@@ -1,11 +1,11 @@
 import AudioToolbox
 
 public func AudioServicesPlaySystemSound(_ systemSoundKey: SystemSoundKey) {
-    AudioServicesPlaySystemSound(SystemSoundID(systemSoundKey.rawValue))
+    AudioServicesPlaySystemSound(systemSoundKey.systemSoundId)
 }
 
 public func AudioServicesPlayAlertSound(_ systemSoundKey: SystemSoundKey) {
-    AudioServicesPlayAlertSound(SystemSoundID(systemSoundKey.rawValue))
+    AudioServicesPlayAlertSound(systemSoundKey.systemSoundId)
 }
 
 public func AudioServicesPlaySystemSoundWithCompletion(
@@ -13,7 +13,7 @@ public func AudioServicesPlaySystemSoundWithCompletion(
     _ inCompletionBlock: (() -> Void)?
 ) {
     AudioServicesPlaySystemSoundWithCompletion(
-        SystemSoundID(systemSoundKey.rawValue),
+        systemSoundKey.systemSoundId,
         inCompletionBlock
     )
 }
@@ -23,7 +23,7 @@ _ systemSoundKey: SystemSoundKey,
 _ inCompletionBlock: (() -> Void)?
 ) {
     AudioServicesPlayAlertSoundWithCompletion(
-        SystemSoundID(systemSoundKey.rawValue),
+        systemSoundKey.systemSoundId,
         inCompletionBlock
     )
 }
