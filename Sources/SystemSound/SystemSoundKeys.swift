@@ -435,6 +435,13 @@ extension SystemSoundKey {
         ids: [1119]
     )
 
+    // airdrop_invite
+    @available(iOS 17.0, *)
+    public static let airdropInvite = SystemSoundKey(
+        name: "airdrop_invite",
+        ids: [1120]
+    )
+
     // camera_shutter_burst_begin
     public static let cameraShutterBurstBegin = SystemSoundKey(
         name: "camera_shutter_burst_begin",
@@ -757,6 +764,27 @@ extension SystemSoundKey {
     public static let pushToTalkUnmuteFail = SystemSoundKey(
         name: "PushToTalkUnmuteFail",
         ids: [1274, 1580]
+    )
+
+    // SenderConfirmation
+    @available(iOS 17.0, *)
+    public static let senderConfirmation = SystemSoundKey(
+        name: "SenderConfirmation",
+        ids: [1275]
+    )
+
+    // ReceiverConfirmation
+    @available(iOS 17.0, *)
+    public static let receiverConfirmation = SystemSoundKey(
+        name: "ReceiverConfirmation",
+        ids: [1276]
+    )
+
+    // ReceiverConnect
+    @available(iOS 17.0, *)
+    public static let receiverConnect = SystemSoundKey(
+        name: "ReceiverConnect",
+        ids: [1277]
     )
 
     // PINEnterDigit_AX
@@ -1713,6 +1741,13 @@ extension SystemSoundKey {
         ids: [1571]
     )
 
+    // WorkoutPrecisionStart_Haptic
+    @available(iOS 17.0, *)
+    public static let workoutPrecisionStartHaptic = SystemSoundKey(
+        name: "WorkoutPrecisionStart_Haptic",
+        ids: [1581]
+    )
+
     // IntervalEnded
     public static let intervalEnded = SystemSoundKey(
         name: "IntervalEnded",
@@ -1728,7 +1763,7 @@ extension SystemSoundKey {
 }
 extension SystemSoundKey {
     public static var allCases: [SystemSoundKey] {
-        [
+        var cases = [
             ringbackToneAnsi,
             ringbackToneCept,
             busyToneAnsi,
@@ -2014,6 +2049,27 @@ extension SystemSoundKey {
             healthReadingFailHaptic,
             intervalEnded,
             intervalUpcoming
+        ]
+
+        if #available(iOS 17.0, *) {
+            cases.append(contentsOf: iOS17Cases)
+        }
+
+        return cases.sorted { lhs, rhs in
+            lhs.systemSoundId < rhs.systemSoundId
+        }
+    }
+}
+
+extension SystemSoundKey {
+    @available(iOS 17.0, *)
+    static var iOS17Cases: [SystemSoundKey] {
+        [
+            airdropInvite,
+            senderConfirmation,
+            receiverConfirmation,
+            receiverConnect,
+            workoutPrecisionStartHaptic,
         ]
     }
 }

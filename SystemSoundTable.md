@@ -1,5 +1,5 @@
-| SystemSoundID | File Name |
-| :----: | :----: |
+| SystemSoundID | File Name | version |
+| :----: | :----: | :----: |
 | 30 | ringback_tone_ansi.caf |
 | 31 | ringback_tone_cept.caf |
 | 32 | busy_tone_ansi.caf |
@@ -77,6 +77,7 @@
 | 1117 | begin_record.caf |
 | 1118 | end_record.caf |
 | 1119 | camera_shutter_burst.caf |
+| 1120 | airdrop_invite.caf | iOS17~ |
 | 1121 | camera_shutter_burst_begin.caf |
 | 1122 | camera_shutter_burst_end.caf |
 | 1123 | key_press_click.caf |
@@ -135,6 +136,9 @@
 | 1272 | PushToTalkUnmute.caf |
 | 1273 | PushToTalkMute.caf |
 | 1274 | PushToTalkUnmuteFail.caf |
+| 1275 | SenderConfirmation.caf | iOS17~ |
+| 1276 | ReceiverConfirmation.caf | iOS17~ |
+| 1277 | ReceiverConnect.caf | iOS17~ |
 | 1300 | sms-received1.caf |
 | 1301 | ReceivedMessage.caf |
 | 1302 | new-mail.caf |
@@ -348,6 +352,7 @@
 | 1578 | PushToTalkUnmute.caf |
 | 1579 | PushToTalkMute.caf |
 | 1580 | PushToTalkUnmuteFail.caf |
+| 1581 | WorkoutPrecisionStart_Haptic.caf | iOS17~ |
 | 1582 | IntervalEnded.caf |
 | 1583 | IntervalUpcoming.caf |
 | 3001 | SwTest1_Haptic.caf |
