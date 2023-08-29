@@ -10,13 +10,31 @@ import SwiftUI
 import SystemSound
 
 struct ContentView: View {
+    @State var searchText: String = ""
+
+    var soundKeys: [SystemSoundKey] {
+        if searchText.isEmpty {
+            return SystemSoundKey.allCases
+        } else {
+            return SystemSoundKey.allCases.filter { key in
+                "\(key.name) \(key.rawValue)".contains(searchText)
+            }
+        }
+    }
+
     var body: some View {
-        List(SystemSoundKey.allCases, id: \.self) { key in
-            Text("\(key.name) (\(key.rawValue))")
+        NavigationView {
+            List(soundKeys, id: \.self) { key in
+                HStack {
+                    Text("\(key.name) (\(key.rawValue))")
+                }
+                .contentShape(Rectangle())
                 .onTapGesture {
                     AudioServicesPlaySystemSound(key)
                 }
+            }
         }
+        .searchable(text: $searchText)
     }
 }
 
