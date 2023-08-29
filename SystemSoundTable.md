@@ -355,5 +355,9 @@
 | 1581 | WorkoutPrecisionStart_Haptic.caf | iOS17~ |
 | 1582 | IntervalEnded.caf |
 | 1583 | IntervalUpcoming.caf |
-| 3001 | SwTest1_Haptic.caf |
+| 1584 | Elevation.caf | iOS17~ |
+| 1585 | SenderConfirmation.caf | iOS17~ |
+| 1586 | ReceiverConfirmation.caf | iOS17~ |
+| 1587 | ReceiverConnect.caf | iOS17~ |
+| 3001 | SwTest1_Haptic.caf | iOS17~ |
 

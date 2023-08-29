@@ -770,21 +770,21 @@ extension SystemSoundKey {
     @available(iOS 17.0, *)
     public static let senderConfirmation = SystemSoundKey(
         name: "SenderConfirmation",
-        ids: [1275]
+        ids: [1275, 1585]
     )
 
     // ReceiverConfirmation
     @available(iOS 17.0, *)
     public static let receiverConfirmation = SystemSoundKey(
         name: "ReceiverConfirmation",
-        ids: [1276]
+        ids: [1276, 1586]
     )
 
     // ReceiverConnect
     @available(iOS 17.0, *)
     public static let receiverConnect = SystemSoundKey(
         name: "ReceiverConnect",
-        ids: [1277]
+        ids: [1277, 1587]
     )
 
     // PINEnterDigit_AX
@@ -1760,6 +1760,13 @@ extension SystemSoundKey {
         ids: [1583]
     )
 
+    // Elevation
+    @available(iOS 17.0, *)
+    public static let elevation = SystemSoundKey(
+        name: "Elevation",
+        ids: [1584]
+    )
+
 }
 extension SystemSoundKey {
     public static var allCases: [SystemSoundKey] {
@@ -2070,6 +2077,7 @@ extension SystemSoundKey {
             receiverConfirmation,
             receiverConnect,
             workoutPrecisionStartHaptic,
+            elevation
         ]
     }
 }
