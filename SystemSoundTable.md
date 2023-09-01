@@ -131,11 +131,11 @@
 | 1263 | MultiwayJoin.caf |
 | 1264 | MultiwayLeave.caf |
 | 1265 | multiway_invitation.caf |
-| 1270 | PushToTalkJoined.caf |
-| 1271 | PushToTalkLeft.caf |
-| 1272 | PushToTalkUnmute.caf |
-| 1273 | PushToTalkMute.caf |
-| 1274 | PushToTalkUnmuteFail.caf |
+| 1270 | PushToTalkJoined.caf | iOS16.2~ |
+| 1271 | PushToTalkLeft.caf | iOS16.2~ |
+| 1272 | PushToTalkUnmute.caf | iOS16.2~ |
+| 1273 | PushToTalkMute.caf | iOS16.2~ |
+| 1274 | PushToTalkUnmuteFail.caf | iOS16.2~ |
 | 1275 | SenderConfirmation.caf | iOS17~ |
 | 1276 | ReceiverConfirmation.caf | iOS17~ |
 | 1277 | ReceiverConnect.caf | iOS17~ |
@@ -347,14 +347,14 @@
 | 1571 | HealthReadingFail_Haptic.caf |
 | 1572 | HeadphoneAudioExposureLimitExceeded.caf |
 | 1573 | ScreenCapture.caf |
-| 1576 | PushToTalkJoined.caf |
-| 1577 | PushToTalkLeft.caf |
-| 1578 | PushToTalkUnmute.caf |
-| 1579 | PushToTalkMute.caf |
-| 1580 | PushToTalkUnmuteFail.caf |
+| 1576 | PushToTalkJoined.caf | iOS16.2~ |
+| 1577 | PushToTalkLeft.caf | iOS16.2~ |
+| 1578 | PushToTalkUnmute.caf | iOS16.2~ |
+| 1579 | PushToTalkMute.caf | iOS16.2~ |
+| 1580 | PushToTalkUnmuteFail.caf | iOS16.2~ |
 | 1581 | WorkoutPrecisionStart_Haptic.caf | iOS17~ |
-| 1582 | IntervalEnded.caf |
-| 1583 | IntervalUpcoming.caf |
+| 1582 | IntervalEnded.caf | iOS16.2~ |
+| 1583 | IntervalUpcoming.caf | iOS16.2~ |
 | 1584 | Elevation.caf | iOS17~ |
 | 1585 | SenderConfirmation.caf | iOS17~ |
 | 1586 | ReceiverConfirmation.caf | iOS17~ |

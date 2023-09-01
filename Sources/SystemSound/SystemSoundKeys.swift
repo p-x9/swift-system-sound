@@ -737,30 +737,35 @@ extension SystemSoundKey {
     )
 
     // PushToTalkJoined
+    @available(iOS 16.2, *)
     public static let pushToTalkJoined = SystemSoundKey(
         name: "PushToTalkJoined",
         ids: [1270, 1576]
     )
 
     // PushToTalkLeft
+    @available(iOS 16.2, *)
     public static let pushToTalkLeft = SystemSoundKey(
         name: "PushToTalkLeft",
         ids: [1271, 1577]
     )
 
     // PushToTalkUnmute
+    @available(iOS 16.2, *)
     public static let pushToTalkUnmute = SystemSoundKey(
         name: "PushToTalkUnmute",
         ids: [1272, 1578]
     )
 
     // PushToTalkMute
+    @available(iOS 16.2, *)
     public static let pushToTalkMute = SystemSoundKey(
         name: "PushToTalkMute",
         ids: [1273, 1579]
     )
 
     // PushToTalkUnmuteFail
+    @available(iOS 16.2, *)
     public static let pushToTalkUnmuteFail = SystemSoundKey(
         name: "PushToTalkUnmuteFail",
         ids: [1274, 1580]
@@ -1749,12 +1754,14 @@ extension SystemSoundKey {
     )
 
     // IntervalEnded
+    @available(iOS 16.2, *)
     public static let intervalEnded = SystemSoundKey(
         name: "IntervalEnded",
         ids: [1582]
     )
 
     // IntervalUpcoming
+    @available(iOS 16.2, *)
     public static let intervalUpcoming = SystemSoundKey(
         name: "IntervalUpcoming",
         ids: [1583]
@@ -1890,11 +1897,6 @@ extension SystemSoundKey {
             multiwayJoin,
             multiwayLeave,
             multiway_invitation,
-            pushToTalkJoined,
-            pushToTalkLeft,
-            pushToTalkUnmute,
-            pushToTalkMute,
-            pushToTalkUnmuteFail,
             pINEnterDigitAX,
             pINDeleteAX,
             pINSubmitAX,
@@ -2053,10 +2055,12 @@ extension SystemSoundKey {
             systemNotificationHaptic,
             sOSFallDetectionPromptEscalationHaptic,
             healthReadingCompleteHaptic,
-            healthReadingFailHaptic,
-            intervalEnded,
-            intervalUpcoming
+            healthReadingFailHaptic
         ]
+
+        if #available(iOS 16.2, *) {
+            cases.append(contentsOf: iOS16_1Cases)
+        }
 
         if #available(iOS 17.0, *) {
             cases.append(contentsOf: iOS17Cases)
@@ -2078,6 +2082,19 @@ extension SystemSoundKey {
             receiverConnect,
             workoutPrecisionStartHaptic,
             elevation
+        ]
+    }
+
+    @available(iOS 16.2, *)
+    static var iOS16_1Cases: [SystemSoundKey] {
+        [
+            pushToTalkJoined,
+            pushToTalkLeft,
+            pushToTalkUnmute,
+            pushToTalkMute,
+            pushToTalkUnmuteFail,
+            intervalEnded,
+            intervalUpcoming
         ]
     }
 }
