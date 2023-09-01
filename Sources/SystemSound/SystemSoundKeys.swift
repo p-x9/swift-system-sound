@@ -304,6 +304,7 @@ extension SystemSoundKey {
     )
 
     // WebcamStart
+    @available(iOS 16.0, *)
     public static let webcamStart = SystemSoundKey(
         name: "WebcamStart",
         ids: [1060]
@@ -581,12 +582,14 @@ extension SystemSoundKey {
     )
 
     // Doorbell
+    @available(iOS 16.0, *)
     public static let doorbell = SystemSoundKey(
         name: "Doorbell",
         ids: [1167]
     )
 
     // PaymentReceivedFailure
+    @available(iOS 16.0, *)
     public static let paymentReceivedFailure = SystemSoundKey(
         name: "PaymentReceivedFailure",
         ids: [1168]
@@ -665,6 +668,7 @@ extension SystemSoundKey {
     )
 
     // DeviceShutdown
+    @available(iOS 16.0, *)
     public static let deviceShutdown = SystemSoundKey(
         name: "DeviceShutdown",
         ids: [1253]
@@ -793,36 +797,42 @@ extension SystemSoundKey {
     )
 
     // PINEnterDigit_AX
+    @available(iOS 16.0, *)
     public static let pINEnterDigitAX = SystemSoundKey(
         name: "PINEnterDigit_AX",
         ids: [1340]
     )
 
     // PINDelete_AX
+    @available(iOS 16.0, *)
     public static let pINDeleteAX = SystemSoundKey(
         name: "PINDelete_AX",
         ids: [1341]
     )
 
     // PINSubmit_AX
+    @available(iOS 16.0, *)
     public static let pINSubmitAX = SystemSoundKey(
         name: "PINSubmit_AX",
         ids: [1342]
     )
 
     // PINUnexpected
+    @available(iOS 16.0, *)
     public static let pINUnexpected = SystemSoundKey(
         name: "PINUnexpected",
         ids: [1343]
     )
 
     // PINEnterDigit
+    @available(iOS 16.0, *)
     public static let pINEnterDigit = SystemSoundKey(
         name: "PINEnterDigit",
         ids: [1344]
     )
 
     // PINDelete
+    @available(iOS 16.0, *)
     public static let pINDelete = SystemSoundKey(
         name: "PINDelete",
         ids: [1345]
@@ -1705,18 +1715,21 @@ extension SystemSoundKey {
     )
 
     // Siren_Countdown_Major_Haptic
+    @available(iOS 16.0, *)
     public static let sirenCountdownMajorHaptic = SystemSoundKey(
         name: "Siren_Countdown_Major_Haptic",
         ids: [1563]
     )
 
     // Siren_Countdown_Minor_Haptic
+    @available(iOS 16.0, *)
     public static let sirenCountdownMinorHaptic = SystemSoundKey(
         name: "Siren_Countdown_Minor_Haptic",
         ids: [1564]
     )
 
     // Doorbell_Haptic
+    @available(iOS 16.0, *)
     public static let doorbellHaptic = SystemSoundKey(
         name: "Doorbell_Haptic",
         ids: [1566]
@@ -1826,7 +1839,6 @@ extension SystemSoundKey {
             sIMToolkitPositiveACK,
             sIMToolkitSMS,
             tink,
-            webcamStart,
             ctBusy,
             ctCongestion,
             ctPathAck,
@@ -1871,8 +1883,6 @@ extension SystemSoundKey {
             accessScanComplete,
             _3rdPartyCritical,
             paymentReceived,
-            doorbell,
-            paymentReceivedFailure,
             dtmf0,
             dtmf1,
             dtmf2,
@@ -1885,7 +1895,6 @@ extension SystemSoundKey {
             dtmf9,
             dtmfStar,
             dtmfPound,
-            deviceShutdown,
             longLowShortHigh,
             shortDoubleHigh,
             shortLowHigh,
@@ -1897,12 +1906,6 @@ extension SystemSoundKey {
             multiwayJoin,
             multiwayLeave,
             multiway_invitation,
-            pINEnterDigitAX,
-            pINDeleteAX,
-            pINSubmitAX,
-            pINUnexpected,
-            pINEnterDigit,
-            pINDelete,
             headphoneAudioExposureLimitExceeded,
             healthNotificationUrgent,
             micMute,
@@ -2049,14 +2052,15 @@ extension SystemSoundKey {
             multiwayInvitation,
             _3rdPartyCriticalHaptic,
             alert1stPartyHaptic,
-            sirenCountdownMajorHaptic,
-            sirenCountdownMinorHaptic,
-            doorbellHaptic,
             systemNotificationHaptic,
             sOSFallDetectionPromptEscalationHaptic,
             healthReadingCompleteHaptic,
             healthReadingFailHaptic
         ]
+
+        if #available(iOS 16.0, *) {
+            cases.append(contentsOf: iOS16Cases)
+        }
 
         if #available(iOS 16.2, *) {
             cases.append(contentsOf: iOS16_1Cases)
@@ -2095,6 +2099,25 @@ extension SystemSoundKey {
             pushToTalkUnmuteFail,
             intervalEnded,
             intervalUpcoming
+        ]
+    }
+
+    @available(iOS 16.0, *)
+    static var iOS16Cases: [SystemSoundKey] {
+        [
+            webcamStart,
+            doorbell,
+            paymentReceivedFailure,
+            deviceShutdown,
+            pINEnterDigitAX,
+            pINDeleteAX,
+            pINSubmitAX,
+            pINUnexpected,
+            pINEnterDigit,
+            pINDelete,
+            sirenCountdownMajorHaptic,
+            sirenCountdownMinorHaptic,
+            doorbellHaptic
         ]
     }
 }
