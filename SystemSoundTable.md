@@ -52,7 +52,7 @@
 | 1054 | SIMToolkitPositiveACK.caf |
 | 1055 | SIMToolkitSMS.caf |
 | 1057 | Tink.caf |
-| 1060 | WebcamStart.caf |
+| 1060 | WebcamStart.caf | iOS16~ |
 | 1070 | ct-busy.caf |
 | 1071 | ct-congestion.caf |
 | 1072 | ct-path-ack.caf |
@@ -104,8 +104,8 @@
 | 1163 | access_scan_complete.caf |
 | 1165 | 3rd_party_critical.caf |
 | 1166 | PaymentReceived.caf |
-| 1167 | Doorbell.caf |
-| 1168 | PaymentReceivedFailure.caf |
+| 1167 | Doorbell.caf | iOS16~ |
+| 1168 | PaymentReceivedFailure.caf | iOS16~ |
 | 1200 | dtmf-0.caf |
 | 1201 | dtmf-1.caf |
 | 1202 | dtmf-2.caf |
@@ -118,7 +118,7 @@
 | 1209 | dtmf-9.caf |
 | 1210 | dtmf-star.caf |
 | 1211 | dtmf-pound.caf |
-| 1253 | DeviceShutdown.caf |
+| 1253 | DeviceShutdown.caf | iOS16~ |
 | 1254 | long_low_short_high.caf |
 | 1255 | short_double_high.caf |
 | 1256 | short_low_high.caf |
@@ -131,11 +131,11 @@
 | 1263 | MultiwayJoin.caf |
 | 1264 | MultiwayLeave.caf |
 | 1265 | multiway_invitation.caf |
-| 1270 | PushToTalkJoined.caf |
-| 1271 | PushToTalkLeft.caf |
-| 1272 | PushToTalkUnmute.caf |
-| 1273 | PushToTalkMute.caf |
-| 1274 | PushToTalkUnmuteFail.caf |
+| 1270 | PushToTalkJoined.caf | iOS16.2~ |
+| 1271 | PushToTalkLeft.caf | iOS16.2~ |
+| 1272 | PushToTalkUnmute.caf | iOS16.2~ |
+| 1273 | PushToTalkMute.caf | iOS16.2~ |
+| 1274 | PushToTalkUnmuteFail.caf | iOS16.2~ |
 | 1275 | SenderConfirmation.caf | iOS17~ |
 | 1276 | ReceiverConfirmation.caf | iOS17~ |
 | 1277 | ReceiverConnect.caf | iOS17~ |
@@ -173,12 +173,12 @@
 | 1334 | Tiptoes.caf |
 | 1335 | Typewriters.caf |
 | 1336 | Update.caf |
-| 1340 | PINEnterDigit_AX.caf |
-| 1341 | PINDelete_AX.caf |
-| 1342 | PINSubmit_AX.caf |
-| 1343 | PINUnexpected.caf |
-| 1344 | PINEnterDigit.caf |
-| 1345 | PINDelete.caf |
+| 1340 | PINEnterDigit_AX.caf | iOS16~ |
+| 1341 | PINDelete_AX.caf | iOS16~ |
+| 1342 | PINSubmit_AX.caf | iOS16~ |
+| 1343 | PINUnexpected.caf | iOS16~ |
+| 1344 | PINEnterDigit.caf | iOS16~ |
+| 1345 | PINDelete.caf | iOS16~ |
 | 1360 | connect_power.caf |
 | 1361 | connect_power.caf |
 | 1362 | HeadphoneAudioExposureLimitExceeded.caf |
@@ -338,23 +338,23 @@
 | 1559 | 3rd_Party_Critical_Haptic.caf |
 | 1560 | Alert_1stParty_Haptic.caf |
 | 1561 | HealthNotificationUrgent.caf |
-| 1563 | Siren_Countdown_Major_Haptic.caf |
-| 1564 | Siren_Countdown_Minor_Haptic.caf |
-| 1566 | Doorbell_Haptic.caf |
+| 1563 | Siren_Countdown_Major_Haptic.caf | iOS16~ |
+| 1564 | Siren_Countdown_Minor_Haptic.caf | iOS16~ |
+| 1566 | Doorbell_Haptic.caf | iOS16~ |
 | 1567 | System_Notification_Haptic.caf |
 | 1568 | SOSFallDetectionPromptEscalation_Haptic.caf |
 | 1570 | HealthReadingComplete_Haptic.caf |
 | 1571 | HealthReadingFail_Haptic.caf |
 | 1572 | HeadphoneAudioExposureLimitExceeded.caf |
 | 1573 | ScreenCapture.caf |
-| 1576 | PushToTalkJoined.caf |
-| 1577 | PushToTalkLeft.caf |
-| 1578 | PushToTalkUnmute.caf |
-| 1579 | PushToTalkMute.caf |
-| 1580 | PushToTalkUnmuteFail.caf |
+| 1576 | PushToTalkJoined.caf | iOS16.2~ |
+| 1577 | PushToTalkLeft.caf | iOS16.2~ |
+| 1578 | PushToTalkUnmute.caf | iOS16.2~ |
+| 1579 | PushToTalkMute.caf | iOS16.2~ |
+| 1580 | PushToTalkUnmuteFail.caf | iOS16.2~ |
 | 1581 | WorkoutPrecisionStart_Haptic.caf | iOS17~ |
-| 1582 | IntervalEnded.caf |
-| 1583 | IntervalUpcoming.caf |
+| 1582 | IntervalEnded.caf | iOS16.2~ |
+| 1583 | IntervalUpcoming.caf | iOS16.2~ |
 | 1584 | Elevation.caf | iOS17~ |
 | 1585 | SenderConfirmation.caf | iOS17~ |
 | 1586 | ReceiverConfirmation.caf | iOS17~ |
