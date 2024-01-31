@@ -53,6 +53,7 @@
 | 1055 | SIMToolkitSMS.caf |
 | 1057 | Tink.caf |
 | 1060 | WebcamStart.caf | iOS16~ |
+| 1061 | LiquidDetected.caf | iOS17~ |
 | 1070 | ct-busy.caf |
 | 1071 | ct-congestion.caf |
 | 1072 | ct-path-ack.caf |
