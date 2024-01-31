@@ -310,6 +310,13 @@ extension SystemSoundKey {
         ids: [1060]
     )
 
+    // LiquidDetected
+    @available(iOS 17.0, *)
+    public static let liquidDetected = SystemSoundKey(
+        name: "LiquidDetected",
+        ids: [1061]
+    )
+
     // ct-busy
     public static let ctBusy = SystemSoundKey(
         name: "ct-busy",
@@ -2080,6 +2087,7 @@ extension SystemSoundKey {
     @available(iOS 17.0, *)
     static var iOS17Cases: [SystemSoundKey] {
         [
+            liquidDetected,
             airdropInvite,
             senderConfirmation,
             receiverConfirmation,
