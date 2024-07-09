@@ -899,6 +899,34 @@ extension SystemSoundKey {
         ids: [1370]
     )
 
+    // HeadGesturesDoubleNod
+    @available(iOS 18.0, *)
+    public static let headGesturesDoubleNod = SystemSoundKey(
+        name: "HeadGesturesDoubleNod",
+        ids: [1371]
+    )
+
+    // HeadGesturesDoubleShake
+    @available(iOS 18.0, *)
+    public static let headGesturesDoubleShake = SystemSoundKey(
+        name: "HeadGesturesDoubleShake",
+        ids: [1372]
+    )
+
+    // HeadGesturesPartialNod
+    @available(iOS 18.0, *)
+    public static let headGesturesPartialNod = SystemSoundKey(
+        name: "HeadGesturesPartialNod",
+        ids: [1373]
+    )
+
+    // HeadGesturesPartialShake
+    @available(iOS 18.0, *)
+    public static let headGesturesPartialShake = SystemSoundKey(
+        name: "HeadGesturesPartialShake",
+        ids: [1374]
+    )
+
     // ScreenCapture
     public static let screenCapture = SystemSoundKey(
         name: "ScreenCapture",
@@ -2077,6 +2105,10 @@ extension SystemSoundKey {
             cases.append(contentsOf: iOS17Cases)
         }
 
+        if #available(iOS 18.0, *) {
+            cases.append(contentsOf: iOS18Cases)
+        }
+
         return cases.sorted { lhs, rhs in
             lhs.systemSoundId < rhs.systemSoundId
         }
@@ -2084,6 +2116,16 @@ extension SystemSoundKey {
 }
 
 extension SystemSoundKey {
+    @available(iOS 18.0, *)
+    static var iOS18Cases: [SystemSoundKey] {
+        [
+            headGesturesDoubleNod,
+            headGesturesDoubleShake,
+            headGesturesPartialNod,
+            headGesturesPartialShake
+        ]
+    }
+
     @available(iOS 17.0, *)
     static var iOS17Cases: [SystemSoundKey] {
         [
