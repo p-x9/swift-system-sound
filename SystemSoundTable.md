@@ -191,6 +191,10 @@
 | 1368 | MediaPaused.caf |
 | 1369 | MediaHandoff.caf |
 | 1370 | NavigationGenericManeuver.caf |
+| 1371 | HeadGesturesDoubleNod.caf | iOS18~ |
+| 1372 | HeadGesturesDoubleShake.caf | iOS18~ |
+| 1373 | HeadGesturesPartialNod.caf | iOS18~ |
+| 1374 | HeadGesturesPartialShake.caf | iOS18~ |
 | 1393 | ScreenCapture.caf |
 | 1394 | payment_success.caf |
 | 1395 | payment_failure.caf |
