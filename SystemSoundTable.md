@@ -399,4 +399,5 @@
 | 3003 | - | MMITest1_Haptic | |
 | 3100 | - | AudioPrewarm | iOS16~ |
 | 3101 | - | HapticPrewarm | iOS16~ |
+| 4095 | - | Vibrate | |
 | 4096 | - | UserAlert | |
