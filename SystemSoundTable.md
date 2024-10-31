@@ -379,8 +379,8 @@
 | 1571 | HealthReadingFail_Haptic.caf | HealthReadingFail_Haptic | |
 | 1572 | HeadphoneAudioExposureLimitExceeded.caf | HeadphoneAudioExposureLimitExceeded_Haptic | |
 | 1573 | ScreenCapture.caf | CameraShutter_Haptic | |
-| 1574 | - | Time_To_Run_Haptic | iOS16.2~ |
-| 1575 | - | Time_To_Walk_Haptic | iOS16.2~ |
+| 1574 | - | Time_To_Run_Haptic | iOS16~ |
+| 1575 | - | Time_To_Walk_Haptic | iOS16~ |
 | 1576 | PushToTalkJoined.caf | PushToTalkJoined_Haptic | iOS16.2~ |
 | 1577 | PushToTalkLeft.caf | PushToTalkLeft_Haptic | iOS16.2~ |
 | 1578 | PushToTalkUnmute.caf | PushToTalkUnmute_Haptic | iOS16.2~ |
