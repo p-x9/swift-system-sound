@@ -268,31 +268,31 @@ extension SystemSoundKey {
     )
 
     // SIMToolkitCallDropped
-    public static let sIMToolkitCallDropped = SystemSoundKey(
+    public static let simToolkitCallDropped = SystemSoundKey(
         name: "SIMToolkitCallDropped",
         ids: [1051]
     )
 
     // SIMToolkitGeneralBeep
-    public static let sIMToolkitGeneralBeep = SystemSoundKey(
+    public static let simToolkitGeneralBeep = SystemSoundKey(
         name: "SIMToolkitGeneralBeep",
         ids: [1052]
     )
 
     // SIMToolkitNegativeACK
-    public static let sIMToolkitNegativeACK = SystemSoundKey(
+    public static let simToolkitNegativeACK = SystemSoundKey(
         name: "SIMToolkitNegativeACK",
         ids: [1053]
     )
 
     // SIMToolkitPositiveACK
-    public static let sIMToolkitPositiveACK = SystemSoundKey(
+    public static let simToolkitPositiveACK = SystemSoundKey(
         name: "SIMToolkitPositiveACK",
         ids: [1054]
     )
 
     // SIMToolkitSMS
-    public static let sIMToolkitSMS = SystemSoundKey(
+    public static let simToolkitSMS = SystemSoundKey(
         name: "SIMToolkitSMS",
         ids: [1055]
     )
@@ -819,42 +819,42 @@ extension SystemSoundKey {
 
     // PINEnterDigit_AX
     @available(iOS 16.0, *)
-    public static let pINEnterDigitAX = SystemSoundKey(
+    public static let pinEnterDigitAX = SystemSoundKey(
         name: "PINEnterDigit_AX",
         ids: [1340]
     )
 
     // PINDelete_AX
     @available(iOS 16.0, *)
-    public static let pINDeleteAX = SystemSoundKey(
+    public static let pinDeleteAX = SystemSoundKey(
         name: "PINDelete_AX",
         ids: [1341]
     )
 
     // PINSubmit_AX
     @available(iOS 16.0, *)
-    public static let pINSubmitAX = SystemSoundKey(
+    public static let pinSubmitAX = SystemSoundKey(
         name: "PINSubmit_AX",
         ids: [1342]
     )
 
     // PINUnexpected
     @available(iOS 16.0, *)
-    public static let pINUnexpected = SystemSoundKey(
+    public static let pinUnexpected = SystemSoundKey(
         name: "PINUnexpected",
         ids: [1343]
     )
 
     // PINEnterDigit
     @available(iOS 16.0, *)
-    public static let pINEnterDigit = SystemSoundKey(
+    public static let pinEnterDigit = SystemSoundKey(
         name: "PINEnterDigit",
         ids: [1344]
     )
 
     // PINDelete
     @available(iOS 16.0, *)
-    public static let pINDelete = SystemSoundKey(
+    public static let pinDelete = SystemSoundKey(
         name: "PINDelete",
         ids: [1345]
     )
@@ -1101,19 +1101,19 @@ extension SystemSoundKey {
     )
 
     // ET_RemoteTap_Receive_Haptic
-    public static let eTRemoteTapReceiveHaptic = SystemSoundKey(
+    public static let etRemoteTapReceiveHaptic = SystemSoundKey(
         name: "ET_RemoteTap_Receive_Haptic",
         ids: [1420]
     )
 
     // ET_RemoteTap_Send_Haptic
-    public static let eTRemoteTapSendHaptic = SystemSoundKey(
+    public static let etRemoteTapSendHaptic = SystemSoundKey(
         name: "ET_RemoteTap_Send_Haptic",
         ids: [1421]
     )
 
     // ET_BeginNotification_Haptic
-    public static let eTBeginNotificationHaptic = SystemSoundKey(
+    public static let etBeginNotificationHaptic = SystemSoundKey(
         name: "ET_BeginNotification_Haptic",
         ids: [1422]
     )
@@ -1287,7 +1287,7 @@ extension SystemSoundKey {
     )
 
     // QB_Dictation_Haptic
-    public static let qBDictationHaptic = SystemSoundKey(
+    public static let qbDictationHaptic = SystemSoundKey(
         name: "QB_Dictation_Haptic",
         ids: [1461]
     )
@@ -1401,19 +1401,19 @@ extension SystemSoundKey {
     )
 
     // UISwitch_On_Haptic
-    public static let uISwitchOnHaptic = SystemSoundKey(
+    public static let uiSwitchOnHaptic = SystemSoundKey(
         name: "UISwitch_On_Haptic",
         ids: [1484]
     )
 
     // UISwitch_Off_Haptic
-    public static let uISwitchOffHaptic = SystemSoundKey(
+    public static let uiSwitchOffHaptic = SystemSoundKey(
         name: "UISwitch_Off_Haptic",
         ids: [1485]
     )
 
     // UISwipe_Haptic
-    public static let uISwipeHaptic = SystemSoundKey(
+    public static let uiSwipeHaptic = SystemSoundKey(
         name: "UISwipe_Haptic",
         ids: [1486]
     )
@@ -1437,7 +1437,7 @@ extension SystemSoundKey {
     )
 
     // QB_Dictation_Off_Haptic
-    public static let qBDictationOffHaptic = SystemSoundKey(
+    public static let qbDictationOffHaptic = SystemSoundKey(
         name: "QB_Dictation_Off_Haptic",
         ids: [1490]
     )
@@ -1467,7 +1467,7 @@ extension SystemSoundKey {
     )
 
     // ET_BeginNotification_Salient_Haptic
-    public static let eTBeginNotificationSalientHaptic = SystemSoundKey(
+    public static let etBeginNotificationSalientHaptic = SystemSoundKey(
         name: "ET_BeginNotification_Salient_Haptic",
         ids: [1495]
     )
@@ -1701,13 +1701,13 @@ extension SystemSoundKey {
     )
 
     // SOSFallDetectionPrompt_Haptic
-    public static let sOSFallDetectionPromptHaptic = SystemSoundKey(
+    public static let sosFallDetectionPromptHaptic = SystemSoundKey(
         name: "SOSFallDetectionPrompt_Haptic",
         ids: [1545]
     )
 
     // SOSEmergencyContactTextPrompt_Haptic
-    public static let sOSEmergencyContactTextPromptHaptic = SystemSoundKey(
+    public static let sosEmergencyContactTextPromptHaptic = SystemSoundKey(
         name: "SOSEmergencyContactTextPrompt_Haptic",
         ids: [1546]
     )
@@ -1812,7 +1812,7 @@ extension SystemSoundKey {
     )
 
     // SOSFallDetectionPromptEscalation_Haptic
-    public static let sOSFallDetectionPromptEscalationHaptic = SystemSoundKey(
+    public static let sosFallDetectionPromptEscalationHaptic = SystemSoundKey(
         name: "SOSFallDetectionPromptEscalation_Haptic",
         ids: [1568]
     )
@@ -1909,11 +1909,11 @@ extension SystemSoundKey {
             typewriters,
             update,
             ussd,
-            sIMToolkitCallDropped,
-            sIMToolkitGeneralBeep,
-            sIMToolkitNegativeACK,
-            sIMToolkitPositiveACK,
-            sIMToolkitSMS,
+            simToolkitCallDropped,
+            simToolkitGeneralBeep,
+            simToolkitNegativeACK,
+            simToolkitPositiveACK,
+            simToolkitSMS,
             tink,
             ctBusy,
             ctCongestion,
@@ -2014,9 +2014,9 @@ extension SystemSoundKey {
             navigationGenericManeuverHaptic,
             cameraCountdownTickHaptic,
             cameraCountdownImminentHaptic,
-            eTRemoteTapReceiveHaptic,
-            eTRemoteTapSendHaptic,
-            eTBeginNotificationHaptic,
+            etRemoteTapReceiveHaptic,
+            etRemoteTapSendHaptic,
+            etBeginNotificationHaptic,
             stockholmActiveHaptic,
             stockholmActiveSingleCycleHaptic,
             stockholmFailureHaptic,
@@ -2045,7 +2045,7 @@ extension SystemSoundKey {
             orbLayersHaptic,
             phoneHangUpHaptic,
             photosZoomDetentHaptic,
-            qBDictationHaptic,
+            qbDictationHaptic,
             stopwatchLapHaptic,
             stopwatchResetHaptic,
             stopwatchStartHaptic,
@@ -2064,18 +2064,18 @@ extension SystemSoundKey {
             phoneAnswerHaptic,
             phoneHoldHaptic,
             walkieTalkieActiveEndHaptic,
-            uISwitchOnHaptic,
-            uISwitchOffHaptic,
-            uISwipeHaptic,
+            uiSwitchOnHaptic,
+            uiSwitchOffHaptic,
+            uiSwipeHaptic,
             systemStartupHaptic,
             buddyPairingRemoteConnectionHaptic,
             buddyPairingRemoteTapHaptic,
-            qBDictationOffHaptic,
+            qbDictationOffHaptic,
             ringtoneDuckedUSHaptic,
             ringtoneDuckedUKHaptic,
             salientNotificationHaptic,
             notificationSalientHaptic,
-            eTBeginNotificationSalientHaptic,
+            etBeginNotificationSalientHaptic,
             alertCalendarSalientHaptic,
             alertReminderDueSalientHaptic,
             alert3rdPartySalientHaptic,
@@ -2114,8 +2114,8 @@ extension SystemSoundKey {
             alertSpartanDisconnectedLowLatencyHaptic,
             accessScanCompleteHaptic,
             buddyMigrationStartHaptic,
-            sOSFallDetectionPromptHaptic,
-            sOSEmergencyContactTextPromptHaptic,
+            sosFallDetectionPromptHaptic,
+            sosEmergencyContactTextPromptHaptic,
             workoutStartAutodetect,
             workoutCompleteAutodetect,
             workoutPausedAutoDetect,
@@ -2129,7 +2129,7 @@ extension SystemSoundKey {
             _3rdPartyCriticalHaptic,
             alert1stPartyHaptic,
             systemNotificationHaptic,
-            sOSFallDetectionPromptEscalationHaptic,
+            sosFallDetectionPromptEscalationHaptic,
             healthReadingCompleteHaptic,
             healthReadingFailHaptic
         ]
@@ -2226,12 +2226,12 @@ extension SystemSoundKey {
             doorbell,
             paymentReceivedFailure,
             deviceShutdown,
-            pINEnterDigitAX,
-            pINDeleteAX,
-            pINSubmitAX,
-            pINUnexpected,
-            pINEnterDigit,
-            pINDelete,
+            pinEnterDigitAX,
+            pinDeleteAX,
+            pinSubmitAX,
+            pinUnexpected,
+            pinEnterDigit,
+            pinDelete,
             sirenCountdownMajorHaptic,
             sirenCountdownMinorHaptic,
             doorbellHaptic
