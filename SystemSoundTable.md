@@ -112,6 +112,7 @@
 | 1166 | PaymentReceived.caf | PaymentReceived | |
 | 1167 | Doorbell.caf | Doorbell | iOS16~ |
 | 1168 | PaymentReceivedFailure.caf | PaymentReceivedFailure | iOS16~ |
+| 1169 | EarInteraction_Complete.caf | EarInteraction_Complete | iOS18.1~ |
 | 1174 | - | Time_To_Run | iOS16~ |
 | 1175 | - | Time_To_Walk | iOS16~ |
 | 1200 | dtmf-0.caf | TouchTone | |
@@ -147,6 +148,10 @@
 | 1275 | SenderConfirmation.caf | IDCard_Sender_Confirmation | iOS17~ |
 | 1276 | ReceiverConfirmation.caf | IDCard_Receiver_Confirmation | iOS17~ |
 | 1277 | ReceiverConnect.caf | IDCard_Receiver_Connect | iOS17~ |
+| 1278 | - | DictationBegin | iOS18~ |
+| 1279 | - | DictationCancel | iOS18~ |
+| 1280 | - | DictationConfirm | iOS18~ |
+| 1281 | RemoteAttentionRequest_Alert.caf | - | iOS18.2~ |
 | 1300 | sms-received1.caf | SystemSoundPreview_IgnoreRingerSwitch | |
 | 1301 | ReceivedMessage.caf | SystemSoundPreview_IgnoreRingerSwitch | |
 | 1302 | new-mail.caf | SystemSoundPreview_IgnoreRingerSwitch | |
@@ -188,6 +193,9 @@
 | 1343 | PINUnexpected.caf | PINUnexpected | iOS16~ |
 | 1344 | PINEnterDigit.caf | PINEnterDigit | iOS16~ |
 | 1345 | PINDelete.caf | PINDelete | iOS16~ |
+| 1346 | NFCCardProvisioned.caf | - | iOS18~ |
+| 1347 | NFCCardComplete.caf | - | iOS18~ |
+| 1348 | NFCCardError.caf | - | iOS18~ |
 | 1350 | - | RingerVibeChanged | |
 | 1351 | - | SilentVibeChanged | |
 | 1352 | - | VibrateAlways | |
@@ -202,6 +210,10 @@
 | 1368 | MediaPaused.caf | - | |
 | 1369 | MediaHandoff.caf | - | |
 | 1370 | NavigationGenericManeuver.caf | NavigationGenericManeuver | |
+| 1371 | HeadGesturesDoubleNod.caf | - | iOS18~ |
+| 1372 | HeadGesturesDoubleShake.caf | - | iOS18~ |
+| 1373 | HeadGesturesPartialNod.caf | - | iOS18~ |
+| 1374 | HeadGesturesPartialShake.caf | - | iOS18~ |
 | 1393 | ScreenCapture.caf | - | |
 | 1394 | payment_success.caf | PaymentSuccess | |
 | 1395 | payment_failure.caf | PaymentFailure | |
@@ -393,6 +405,7 @@
 | 1585 | SenderConfirmation.caf | IDCard_Sender_Confirmation_Haptic | iOS17~ |
 | 1586 | ReceiverConfirmation.caf | IDCard_Receiver_Confirmation_Haptic | iOS17~ |
 | 1587 | ReceiverConnect.caf | IDCard_Receiver_Connect_Haptic | iOS17~ |
+| 1588 | RegattaTimer.caf | - | iOS18~ |
 | 3000 | - | RelTest1_Haptic | |
 | 3001 | SwTest1_Haptic.caf | unknown | |
 | 3002 | - | SwTest2_Haptic | |

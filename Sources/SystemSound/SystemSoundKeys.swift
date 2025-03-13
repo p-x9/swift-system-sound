@@ -602,6 +602,13 @@ extension SystemSoundKey {
         ids: [1168]
     )
 
+    // EarInteraction_Complete
+    @available(iOS 18.1, *)
+    public static let earInteractionComplete = SystemSoundKey(
+        name: "EarInteractionComplete",
+        ids: [1169]
+    )
+
     // dtmf-0
     public static let dtmf0 = SystemSoundKey(
         name: "dtmf-0",
@@ -803,6 +810,13 @@ extension SystemSoundKey {
         ids: [1277, 1587]
     )
 
+    // RemoteAttentionRequest_Alert
+    @available(iOS 18.2, *)
+    public static let remoteAttentionRequestAlert = SystemSoundKey(
+        name: "RemoteAttentionRequest_Alert",
+        ids: [1281]
+    )
+
     // PINEnterDigit_AX
     @available(iOS 16.0, *)
     public static let pINEnterDigitAX = SystemSoundKey(
@@ -843,6 +857,27 @@ extension SystemSoundKey {
     public static let pINDelete = SystemSoundKey(
         name: "PINDelete",
         ids: [1345]
+    )
+
+    // NFCCardProvisioned
+    @available(iOS 18.0, *)
+    public static let nfcCardProvisioned = SystemSoundKey(
+        name: "NFCCardProvisioned",
+        ids: [1346]
+    )
+
+    // NFCCardComplete
+    @available(iOS 18.0, *)
+    public static let nfcCardComplete = SystemSoundKey(
+        name: "NFCCardComplete",
+        ids: [1347]
+    )
+
+    // NFCCardError
+    @available(iOS 18.0, *)
+    public static let nfcCardError = SystemSoundKey(
+        name: "NFCCardError",
+        ids: [1348]
     )
 
     // HeadphoneAudioExposureLimitExceeded
@@ -897,6 +932,34 @@ extension SystemSoundKey {
     public static let navigationGenericManeuver = SystemSoundKey(
         name: "NavigationGenericManeuver",
         ids: [1370]
+    )
+
+    // HeadGesturesDoubleNod
+    @available(iOS 18.0, *)
+    public static let headGesturesDoubleNod = SystemSoundKey(
+        name: "HeadGesturesDoubleNod",
+        ids: [1371]
+    )
+
+    // HeadGesturesDoubleShake
+    @available(iOS 18.0, *)
+    public static let headGesturesDoubleShake = SystemSoundKey(
+        name: "HeadGesturesDoubleShake",
+        ids: [1372]
+    )
+
+    // HeadGesturesPartialNod
+    @available(iOS 18.0, *)
+    public static let headGesturesPartialNod = SystemSoundKey(
+        name: "HeadGesturesPartialNod",
+        ids: [1373]
+    )
+
+    // HeadGesturesPartialShake
+    @available(iOS 18.0, *)
+    public static let headGesturesPartialShake = SystemSoundKey(
+        name: "HeadGesturesPartialShake",
+        ids: [1374]
     )
 
     // ScreenCapture
@@ -1794,6 +1857,12 @@ extension SystemSoundKey {
         ids: [1584]
     )
 
+    // RegattaTimer
+    @available(iOS 18.0, *)
+    public static let regattaTimer = SystemSoundKey(
+        name: "RegattaTimer",
+        ids: [1588]
+    )
 }
 extension SystemSoundKey {
     public static var allCases: [SystemSoundKey] {
@@ -2077,6 +2146,18 @@ extension SystemSoundKey {
             cases.append(contentsOf: iOS17Cases)
         }
 
+        if #available(iOS 18.0, *) {
+            cases.append(contentsOf: iOS18Cases)
+        }
+
+        if #available(iOS 18.1, *) {
+            cases.append(contentsOf: iOS18_1Cases)
+        }
+
+        if #available(iOS 18.2, *) {
+            cases.append(contentsOf: iOS18_2Cases)
+        }
+
         return cases.sorted { lhs, rhs in
             lhs.systemSoundId < rhs.systemSoundId
         }
@@ -2084,6 +2165,34 @@ extension SystemSoundKey {
 }
 
 extension SystemSoundKey {
+    @available(iOS 18.2, *)
+    static var iOS18_2Cases: [SystemSoundKey] {
+        [
+            remoteAttentionRequestAlert
+        ]
+    }
+
+    @available(iOS 18.1, *)
+    static var iOS18_1Cases: [SystemSoundKey] {
+        [
+            earInteractionComplete
+        ]
+    }
+
+    @available(iOS 18.0, *)
+    static var iOS18Cases: [SystemSoundKey] {
+        [
+            nfcCardProvisioned,
+            nfcCardComplete,
+            nfcCardError,
+            headGesturesDoubleNod,
+            headGesturesDoubleShake,
+            headGesturesPartialNod,
+            headGesturesPartialShake,
+            regattaTimer
+        ]
+    }
+
     @available(iOS 17.0, *)
     static var iOS17Cases: [SystemSoundKey] {
         [
