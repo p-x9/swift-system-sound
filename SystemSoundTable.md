@@ -148,6 +148,9 @@
 | 1275 | SenderConfirmation.caf | IDCard_Sender_Confirmation | iOS17~ |
 | 1276 | ReceiverConfirmation.caf | IDCard_Receiver_Confirmation | iOS17~ |
 | 1277 | ReceiverConnect.caf | IDCard_Receiver_Connect | iOS17~ |
+| 1278 | - | DictationBegin | iOS18~ |
+| 1279 | - | DictationCancel | iOS18~ |
+| 1280 | - | DictationConfirm | iOS18~ |
 | 1281 | RemoteAttentionRequest_Alert.caf | - | iOS18.2~ |
 | 1300 | sms-received1.caf | SystemSoundPreview_IgnoreRingerSwitch | |
 | 1301 | ReceivedMessage.caf | SystemSoundPreview_IgnoreRingerSwitch | |
