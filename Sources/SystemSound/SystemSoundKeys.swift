@@ -3,14 +3,29 @@ import AudioToolbox
 public struct SystemSoundKey: CaseIterable, Equatable, Codable, Hashable {
 
     public let name: String
-    public let ids: [Int]
+    public let id: Int
+    public let category: String?
+
     public var systemSoundId: SystemSoundID {
-        SystemSoundID(ids[0])
+        SystemSoundID(id)
     }
 
+    public init(
+        name: String,
+        id: Int,
+        category: String? = nil
+    ) {
+        self.name = name
+        self.id = id
+        self.category = category
+    }
+}
+
+extension SystemSoundKey {
     public init(name: String, ids: [Int]) {
         self.name = name
-        self.ids = ids
+        self.id = ids[0]
+        self.category = nil
     }
 }
 
