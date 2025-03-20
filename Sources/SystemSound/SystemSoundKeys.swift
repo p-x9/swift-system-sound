@@ -5,6 +5,7 @@ public struct SystemSoundKey: CaseIterable, Equatable, Codable, Hashable {
     public let name: String
     public let id: Int
     public let category: String?
+    public let kind: SystemSoundKind
 
     public var systemSoundId: SystemSoundID {
         SystemSoundID(id)
@@ -13,11 +14,13 @@ public struct SystemSoundKey: CaseIterable, Equatable, Codable, Hashable {
     public init(
         name: String,
         id: Int,
-        category: String? = nil
+        category: String? = nil,
+        kind: SystemSoundKind = .default
     ) {
         self.name = name
         self.id = id
         self.category = category
+        self.kind = kind
     }
 }
 
