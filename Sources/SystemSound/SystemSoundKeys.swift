@@ -273,7 +273,7 @@ extension SystemSoundKey {
     }
 
     /// SMSReceived
-    public struct SmsReceived: CaseIterable {
+    public struct SMSReceived: CaseIterable {
         public static let categoryName = "SMSReceived"
 
         public let name: String
@@ -292,17 +292,17 @@ extension SystemSoundKey {
         )
     }
 
-    public static func smsReceived(_ soundId: SmsReceived) -> SystemSoundKey {
+    public static func smsReceived(_ soundId: SMSReceived) -> SystemSoundKey {
         .init(
             name: soundId.name,
             id: soundId.id,
-            category: SmsReceived.categoryName,
+            category: SMSReceived.categoryName,
             kind: soundId.kind
         )
     }
 
     /// SMSSent
-    public struct SmsSent: CaseIterable {
+    public struct SMSSent: CaseIterable {
         public static let categoryName = "SMSSent"
 
         public let name: String
@@ -321,11 +321,11 @@ extension SystemSoundKey {
         )
     }
 
-    public static func smsSent(_ soundId: SmsSent) -> SystemSoundKey {
+    public static func smsSent(_ soundId: SMSSent) -> SystemSoundKey {
         .init(
             name: soundId.name,
             id: soundId.id,
-            category: SmsSent.categoryName,
+            category: SMSSent.categoryName,
             kind: soundId.kind
         )
     }
@@ -370,7 +370,7 @@ extension SystemSoundKey {
     }
 
     /// SMSReceived_Alert
-    public struct SmsReceivedAlert: CaseIterable {
+    public struct SMSReceivedAlert: CaseIterable {
         public static let categoryName = "SMSReceived_Alert"
 
         public let name: String
@@ -543,17 +543,17 @@ extension SystemSoundKey {
         )
     }
 
-    public static func smsReceivedAlert(_ soundId: SmsReceivedAlert) -> SystemSoundKey {
+    public static func smsReceivedAlert(_ soundId: SMSReceivedAlert) -> SystemSoundKey {
         .init(
             name: soundId.name,
             id: soundId.id,
-            category: SmsReceivedAlert.categoryName,
+            category: SMSReceivedAlert.categoryName,
             kind: soundId.kind
         )
     }
 
     /// SMSReceived_Vibrate
-    public struct SmsReceivedVibrate: CaseIterable {
+    public struct SMSReceivedVibrate: CaseIterable {
         public static let categoryName = "SMSReceived_Vibrate"
 
         public let name: String
@@ -572,11 +572,11 @@ extension SystemSoundKey {
         )
     }
 
-    public static func smsReceivedVibrate(_ soundId: SmsReceivedVibrate) -> SystemSoundKey {
+    public static func smsReceivedVibrate(_ soundId: SMSReceivedVibrate) -> SystemSoundKey {
         .init(
             name: soundId.name,
             id: soundId.id,
-            category: SmsReceivedVibrate.categoryName,
+            category: SMSReceivedVibrate.categoryName,
             kind: soundId.kind
         )
     }
@@ -1533,7 +1533,7 @@ extension SystemSoundKey {
     }
 
     /// VCCallWaiting
-    public struct VcCallWaiting: CaseIterable {
+    public struct VCCallWaiting: CaseIterable {
         public static let categoryName = "VCCallWaiting"
 
         public let name: String
@@ -1552,17 +1552,17 @@ extension SystemSoundKey {
         )
     }
 
-    public static func vcCallWaiting(_ soundId: VcCallWaiting) -> SystemSoundKey {
+    public static func vcCallWaiting(_ soundId: VCCallWaiting) -> SystemSoundKey {
         .init(
             name: soundId.name,
             id: soundId.id,
-            category: VcCallWaiting.categoryName,
+            category: VCCallWaiting.categoryName,
             kind: soundId.kind
         )
     }
 
     /// VCCallUpgrade
-    public struct VcCallUpgrade: CaseIterable {
+    public struct VCCallUpgrade: CaseIterable {
         public static let categoryName = "VCCallUpgrade"
 
         public let name: String
@@ -1581,11 +1581,11 @@ extension SystemSoundKey {
         )
     }
 
-    public static func vcCallUpgrade(_ soundId: VcCallUpgrade) -> SystemSoundKey {
+    public static func vcCallUpgrade(_ soundId: VCCallUpgrade) -> SystemSoundKey {
         .init(
             name: soundId.name,
             id: soundId.id,
-            category: VcCallUpgrade.categoryName,
+            category: VCCallUpgrade.categoryName,
             kind: soundId.kind
         )
     }
@@ -2098,7 +2098,7 @@ extension SystemSoundKey {
     }
 
     /// VCGroupInvitation_Alert
-    public struct VcGroupInvitationAlert: CaseIterable {
+    public struct VCGroupInvitationAlert: CaseIterable {
         public static let categoryName = "VCGroupInvitation_Alert"
 
         public let name: String
@@ -2117,11 +2117,11 @@ extension SystemSoundKey {
         )
     }
 
-    public static func vcGroupInvitationAlert(_ soundId: VcGroupInvitationAlert) -> SystemSoundKey {
+    public static func vcGroupInvitationAlert(_ soundId: VCGroupInvitationAlert) -> SystemSoundKey {
         .init(
             name: soundId.name,
             id: soundId.id,
-            category: VcGroupInvitationAlert.categoryName,
+            category: VCGroupInvitationAlert.categoryName,
             kind: soundId.kind
         )
     }
@@ -2433,7 +2433,7 @@ extension SystemSoundKey {
     }
 
     /// SMSReceived_Selection
-    public struct SmsReceivedSelection: CaseIterable {
+    public struct SMSReceivedSelection: CaseIterable {
         public static let categoryName = "SMSReceived_Selection"
 
         public let name: String
@@ -2606,11 +2606,11 @@ extension SystemSoundKey {
         )
     }
 
-    public static func smsReceivedSelection(_ soundId: SmsReceivedSelection) -> SystemSoundKey {
+    public static func smsReceivedSelection(_ soundId: SMSReceivedSelection) -> SystemSoundKey {
         .init(
             name: soundId.name,
             id: soundId.id,
-            category: SmsReceivedSelection.categoryName,
+            category: SMSReceivedSelection.categoryName,
             kind: soundId.kind
         )
     }
@@ -5608,11 +5608,11 @@ extension SystemSoundKey {
         MailReceived.allCases.map({ .mailReceived($0) }) +
         MailSent.allCases.map({ .mailSent($0) }) +
         VoicemailReceived.allCases.map({ .voicemailReceived($0) }) +
-        SmsReceived.allCases.map({ .smsReceived($0) }) +
-        SmsSent.allCases.map({ .smsSent($0) }) +
+        SMSReceived.allCases.map({ .smsReceived($0) }) +
+        SMSSent.allCases.map({ .smsSent($0) }) +
         CalendarAlert.allCases.map({ .calendarAlert($0) }) +
-        SmsReceivedAlert.allCases.map({ .smsReceivedAlert($0) }) +
-        SmsReceivedVibrate.allCases.map({ .smsReceivedVibrate($0) }) +
+        SMSReceivedAlert.allCases.map({ .smsReceivedAlert($0) }) +
+        SMSReceivedVibrate.allCases.map({ .smsReceivedVibrate($0) }) +
         UserAlert.allCases.map({ .userAlert($0) }) +
         ReminderAlert.allCases.map({ .reminderAlert($0) }) +
         UssdAlert.allCases.map({ .ussdAlert($0) }) +
@@ -5639,8 +5639,8 @@ extension SystemSoundKey {
         CameraShutterAlt.allCases.map({ .cameraShutterAlt($0) }) +
         AirDropInvitation.allCases.map({ .airDropInvitation($0) }) +
         KeyPressClickRemote.allCases.map({ .keyPressClickRemote($0) }) +
-        VcCallWaiting.allCases.map({ .vcCallWaiting($0) }) +
-        VcCallUpgrade.allCases.map({ .vcCallUpgrade($0) }) +
+        VCCallWaiting.allCases.map({ .vcCallWaiting($0) }) +
+        VCCallUpgrade.allCases.map({ .vcCallUpgrade($0) }) +
         PaymentSuccess.allCases.map({ .paymentSuccess($0) }) +
         CriticalAlert.allCases.map({ .criticalAlert($0) }) +
         TouchTone.allCases.map({ .touchTone($0) }) +
@@ -5651,14 +5651,14 @@ extension SystemSoundKey {
         HeadsetCallWaitingActions.allCases.map({ .headsetCallWaitingActions($0) }) +
         HeadsetTransitionEnd.allCases.map({ .headsetTransitionEnd($0) }) +
         HealthAlert.allCases.map({ .healthAlert($0) }) +
-        VcGroupInvitationAlert.allCases.map({ .vcGroupInvitationAlert($0) }) +
+        VCGroupInvitationAlert.allCases.map({ .vcGroupInvitationAlert($0) }) +
         IdCardSenderConfirmation.allCases.map({ .idCardSenderConfirmation($0) }) +
         IdCardReceiverConfirmation.allCases.map({ .idCardReceiverConfirmation($0) }) +
         IdCardReceiverConnect.allCases.map({ .idCardReceiverConnect($0) }) +
         SystemSoundPreviewIgnoreRingerSwitch.allCases.map({ .systemSoundPreviewIgnoreRingerSwitch($0) }) +
         SystemSoundPreview.allCases.map({ .systemSoundPreview($0) }) +
         KeyPressClickPreview.allCases.map({ .keyPressClickPreview($0) }) +
-        SmsReceivedSelection.allCases.map({ .smsReceivedSelection($0) }) +
+        SMSReceivedSelection.allCases.map({ .smsReceivedSelection($0) }) +
         SystemSoundPreviewIgnoreRingerSwitchNoVibe.allCases.map({ .systemSoundPreviewIgnoreRingerSwitchNoVibe($0) }) +
         PaymentFailure.allCases.map({ .paymentFailure($0) }) +
         AlertBatteryLowHaptic.allCases.map({ .alertBatteryLowHaptic($0) }) +
