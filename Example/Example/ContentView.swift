@@ -24,10 +24,25 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
+            _body
+        }
+        .searchable(text: $searchText)
+    }
+}
+
+extension ContentView {
+    var _body: some View {
+        VStack {
             List(soundKeys, id: \.self) { key in
                 HStack {
                     VStack(alignment: .leading) {
-                        Text(key.name)
+                        HStack {
+                            Text(key.name)
+                            if let category = key.category {
+                                Text("(\(category))")
+                                    .font(.caption)
+                            }
+                        }
                         Text(key.numbers)
                             .font(.caption)
                     }
@@ -39,15 +54,18 @@ struct ContentView: View {
                 }
             }
         }
-        .searchable(text: $searchText)
     }
 }
 
 private extension SystemSoundKey {
     var numbers: String {
-        ids.map { "\($0)" }.joined(separator: ", ")
+        id.description
     }
+
     var title: String {
+        if let category {
+            return "\(name)(\(category))\n(\(numbers))"
+        }
         return "\(name)\n(\(numbers))"
     }
 }

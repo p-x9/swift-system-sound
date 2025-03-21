@@ -26,7 +26,9 @@ import SystemSound
 ### PlaySounds
 
 ```swift
-AudioServicesPlaySystemSound(.sentMessage)
+AudioServicesPlaySystemSound(.smsSent(.sentMessage))
+AudioServicesPlaySystemSound(.touchTone(.dtmfStar))
+AudioServicesPlaySystemSound(.navigationPush)
 ```
 
 ## License
