@@ -24,6 +24,19 @@ public struct SystemSoundKey: CaseIterable, Equatable, Codable, Hashable {
 }
 
 extension SystemSoundKey {
+    public var audioFilePath: String? {
+        guard !name.isEmpty else { return nil }
+        let directory = "/System/Library/Audio/UISounds/"
+        var path = directory
+        if kind != .default {
+            path += kind.directoryName + "/"
+        }
+        path += name + ".caf"
+        return path
+    }
+}
+
+extension SystemSoundKey {
     /// InCallSystemSound
     public struct InCallSystemSound: CaseIterable {
         public static let categoryName = "InCallSystemSound"
