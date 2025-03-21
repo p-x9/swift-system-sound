@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum SystemSoundKind {
+public enum SystemSoundKind: String, Codable, Hashable {
     case `default`
     case modern
     case new
