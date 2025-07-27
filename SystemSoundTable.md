@@ -77,22 +77,22 @@
 | 1114 | end_record.caf | EndRecording | default | |
 | 1115 | jbl_ambiguous.caf | JBL_Ambiguous | default | |
 | 1116 | jbl_no_match.caf | JBL_NoMatch | default | |
-| 1117 | begin_record.caf | BeginVideoRecordingAlwaysHeard | default | |
-| 1118 | end_record.caf | EndVideoRecordingAlwaysHeard | default | |
+| 1117 | begin_record.caf | BeginVideoRecording | default | |
+| 1118 | end_record.caf | EndVideoRecording | default | |
 | 1119 | camera_shutter_burst.caf | CameraShutterAlt | Modern | |
 | 1120 | airdrop_invite.caf | AirDropInvitation | Modern | iOS17~ |
 | 1121 | camera_shutter_burst_begin.caf | CameraShutterAlt | Modern | |
 | 1122 | camera_shutter_burst_end.caf | CameraShutterAlt | Modern | |
 | 1123 | key_press_click.caf | KeyPressClick_Remote | default | |
-| 1124 | focus_change_keyboard.caf | - | default | |
-| 1125 | focus_change_app_icon.caf | - | default | |
-| 1126 | focus_change_large.caf | - | default | |
-| 1127 | focus_change_small.caf | - | default | |
-| 1128 | navigation_push.caf | - | default | |
-| 1129 | navigation_pop.caf | - | default | |
-| 1130 | keyboard_press_normal.caf | - | default | |
-| 1131 | keyboard_press_delete.caf | - | default | |
-| 1132 | keyboard_press_clear.caf | - | default | |
+| 1124 | focus_change_keyboard.caf | FocusChangeKeyboard | default | |
+| 1125 | focus_change_app_icon.caf | FocusChangeAppIcon | default | |
+| 1126 | focus_change_large.caf | FocusChangeLarge | default | |
+| 1127 | focus_change_small.caf | FocusChangeSmall | default | |
+| 1128 | navigation_push.caf | NavigationPush | default | |
+| 1129 | navigation_pop.caf | NavigationPop | default | |
+| 1130 | keyboard_press_normal.caf | KeyboardPressNormal | default | |
+| 1131 | keyboard_press_delete.caf | KeyboardPressDelete | default | |
+| 1132 | keyboard_press_clear.caf | KeyboardPressClear | default | |
 | 1150 | vc~invitation-accepted.caf | VCInvitationAccepted | nano | |
 | 1151 | vc~ringing.caf | VCRinging | nano | |
 | 1152 | vc~ended.caf | VCEnded | nano | |
@@ -151,7 +151,7 @@
 | 1278 | - | DictationBegin | - | iOS18~ |
 | 1279 | - | DictationCancel | - | iOS18~ |
 | 1280 | - | DictationConfirm | - | iOS18~ |
-| 1281 | RemoteAttentionRequest_Alert.caf | - | default | iOS18.2~ |
+| 1281 | RemoteAttentionRequest_Alert.caf | RemoteAttentionRequest_Alert | default | iOS18.2~ |
 | 1300 | sms-received1.caf | SystemSoundPreview_IgnoreRingerSwitch | nano | |
 | 1301 | ReceivedMessage.caf | SystemSoundPreview_IgnoreRingerSwitch | default | |
 | 1302 | new-mail.caf | SystemSoundPreview_IgnoreRingerSwitch | default | |
@@ -214,7 +214,7 @@
 | 1372 | HeadGesturesDoubleShake.caf | - | nano | iOS18~ |
 | 1373 | HeadGesturesPartialNod.caf | - | nano | iOS18~ |
 | 1374 | HeadGesturesPartialShake.caf | - | nano | iOS18~ |
-| 1393 | ScreenCapture.caf | - | nano | |
+| 1393 | ScreenCapture.caf | CameraShutterAlt | nano | |
 | 1394 | payment_success.caf | PaymentSuccess | default | |
 | 1395 | payment_failure.caf | PaymentFailure | default | |
 | 1396 | acknowledgment_sent.caf | - | default | |
