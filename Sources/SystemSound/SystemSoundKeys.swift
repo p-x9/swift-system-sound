@@ -1326,9 +1326,9 @@ extension SystemSoundKey {
         )
     }
 
-    /// BeginVideoRecordingAlwaysHeard
-    public struct BeginVideoRecordingAlwaysHeard: CaseIterable {
-        public static let categoryName = "BeginVideoRecordingAlwaysHeard"
+    /// BeginVideoRecording
+    public struct BeginVideoRecording: CaseIterable {
+        public static let categoryName = "BeginVideoRecording"
 
         public let name: String
         public let id: Int
@@ -1338,7 +1338,7 @@ extension SystemSoundKey {
             [.beginRecord]
         }
 
-        /// begin_record (BeginVideoRecordingAlwaysHeard)
+        /// begin_record (BeginVideoRecording)
         public static let beginRecord: Self = .init(
             name: "begin_record",
             id: 1117,
@@ -1346,18 +1346,18 @@ extension SystemSoundKey {
         )
     }
 
-    public static func beginVideoRecordingAlwaysHeard(_ soundId: BeginVideoRecordingAlwaysHeard) -> SystemSoundKey {
+    public static func beginVideoRecording(_ soundId: BeginVideoRecording) -> SystemSoundKey {
         .init(
             name: soundId.name,
             id: soundId.id,
-            category: BeginVideoRecordingAlwaysHeard.categoryName,
+            category: BeginVideoRecording.categoryName,
             kind: soundId.kind
         )
     }
 
-    /// EndVideoRecordingAlwaysHeard
-    public struct EndVideoRecordingAlwaysHeard: CaseIterable {
-        public static let categoryName = "EndVideoRecordingAlwaysHeard"
+    /// EndVideoRecording
+    public struct EndVideoRecording: CaseIterable {
+        public static let categoryName = "EndVideoRecording"
 
         public let name: String
         public let id: Int
@@ -1367,7 +1367,7 @@ extension SystemSoundKey {
             [.endRecord]
         }
 
-        /// end_record (EndVideoRecordingAlwaysHeard)
+        /// end_record (EndVideoRecording)
         public static let endRecord: Self = .init(
             name: "end_record",
             id: 1118,
@@ -1375,11 +1375,11 @@ extension SystemSoundKey {
         )
     }
 
-    public static func endVideoRecordingAlwaysHeard(_ soundId: EndVideoRecordingAlwaysHeard) -> SystemSoundKey {
+    public static func endVideoRecording(_ soundId: EndVideoRecording) -> SystemSoundKey {
         .init(
             name: soundId.name,
             id: soundId.id,
-            category: EndVideoRecordingAlwaysHeard.categoryName,
+            category: EndVideoRecording.categoryName,
             kind: soundId.kind
         )
     }
@@ -1393,7 +1393,7 @@ extension SystemSoundKey {
         public let kind: SystemSoundKind
 
         public static var allCases: [Self] {
-            [.cameraShutterBurst, .cameraShutterBurstBegin, .cameraShutterBurstEnd, .cameraTimerFinalSecond, .cameraTimerCountdown]
+            [.cameraShutterBurst, .cameraShutterBurstBegin, .cameraShutterBurstEnd, .cameraTimerFinalSecond, .cameraTimerCountdown, .screenCapture]
         }
 
         /// camera_shutter_burst (CameraShutterAlt)
@@ -1429,6 +1429,13 @@ extension SystemSoundKey {
             name: "camera_timer_countdown",
             id: 1261,
             kind: .default
+        )
+
+        /// ScreenCapture (CameraShutterAlt)
+        public static let screenCapture: Self = .init(
+            name: "ScreenCapture",
+            id: 1393,
+            kind: .nano
         )
     }
 
@@ -1499,6 +1506,96 @@ extension SystemSoundKey {
             id: soundId.id,
             category: KeyPressClickRemote.categoryName,
             kind: soundId.kind
+        )
+    }
+
+    /// focus_change_keyboard (FocusChangeKeyboard)
+    public static var focusChangeKeyboard: SystemSoundKey {
+        .init(
+            name: "focus_change_keyboard",
+            id: 1124,
+            category: "FocusChangeKeyboard",
+            kind: .default
+        )
+    }
+
+    /// focus_change_app_icon (FocusChangeAppIcon)
+    public static var focusChangeAppIcon: SystemSoundKey {
+        .init(
+            name: "focus_change_app_icon",
+            id: 1125,
+            category: "FocusChangeAppIcon",
+            kind: .default
+        )
+    }
+
+    /// focus_change_large (FocusChangeLarge)
+    public static var focusChangeLarge: SystemSoundKey {
+        .init(
+            name: "focus_change_large",
+            id: 1126,
+            category: "FocusChangeLarge",
+            kind: .default
+        )
+    }
+
+    /// focus_change_small (FocusChangeSmall)
+    public static var focusChangeSmall: SystemSoundKey {
+        .init(
+            name: "focus_change_small",
+            id: 1127,
+            category: "FocusChangeSmall",
+            kind: .default
+        )
+    }
+
+    /// navigation_push (NavigationPush)
+    public static var navigationPush: SystemSoundKey {
+        .init(
+            name: "navigation_push",
+            id: 1128,
+            category: "NavigationPush",
+            kind: .default
+        )
+    }
+
+    /// navigation_pop (NavigationPop)
+    public static var navigationPop: SystemSoundKey {
+        .init(
+            name: "navigation_pop",
+            id: 1129,
+            category: "NavigationPop",
+            kind: .default
+        )
+    }
+
+    /// keyboard_press_normal (KeyboardPressNormal)
+    public static var keyboardPressNormal: SystemSoundKey {
+        .init(
+            name: "keyboard_press_normal",
+            id: 1130,
+            category: "KeyboardPressNormal",
+            kind: .default
+        )
+    }
+
+    /// keyboard_press_delete (KeyboardPressDelete)
+    public static var keyboardPressDelete: SystemSoundKey {
+        .init(
+            name: "keyboard_press_delete",
+            id: 1131,
+            category: "KeyboardPressDelete",
+            kind: .default
+        )
+    }
+
+    /// keyboard_press_clear (KeyboardPressClear)
+    public static var keyboardPressClear: SystemSoundKey {
+        .init(
+            name: "keyboard_press_clear",
+            id: 1132,
+            category: "KeyboardPressClear",
+            kind: .default
         )
     }
 
@@ -2306,6 +2403,17 @@ extension SystemSoundKey {
             name: "",
             id: 1280,
             category: "DictationConfirm",
+            kind: .default
+        )
+    }
+
+    /// RemoteAttentionRequest_Alert (RemoteAttentionRequest_Alert)
+    @available(iOS 18.2, *)
+    public static var remoteAttentionRequestAlert: SystemSoundKey {
+        .init(
+            name: "RemoteAttentionRequest_Alert",
+            id: 1281,
+            category: "RemoteAttentionRequest_Alert",
             kind: .default
         )
     }
@@ -5352,107 +5460,6 @@ extension SystemSoundKey {
         )
     }
 
-    /// focus_change_keyboard
-    public static var focusChangeKeyboard: SystemSoundKey {
-        .init(
-            name: "focus_change_keyboard",
-            id: 1124,
-            category: nil,
-            kind: .default
-        )
-    }
-
-    /// focus_change_app_icon
-    public static var focusChangeAppIcon: SystemSoundKey {
-        .init(
-            name: "focus_change_app_icon",
-            id: 1125,
-            category: nil,
-            kind: .default
-        )
-    }
-
-    /// focus_change_large
-    public static var focusChangeLarge: SystemSoundKey {
-        .init(
-            name: "focus_change_large",
-            id: 1126,
-            category: nil,
-            kind: .default
-        )
-    }
-
-    /// focus_change_small
-    public static var focusChangeSmall: SystemSoundKey {
-        .init(
-            name: "focus_change_small",
-            id: 1127,
-            category: nil,
-            kind: .default
-        )
-    }
-
-    /// navigation_push
-    public static var navigationPush: SystemSoundKey {
-        .init(
-            name: "navigation_push",
-            id: 1128,
-            category: nil,
-            kind: .default
-        )
-    }
-
-    /// navigation_pop
-    public static var navigationPop: SystemSoundKey {
-        .init(
-            name: "navigation_pop",
-            id: 1129,
-            category: nil,
-            kind: .default
-        )
-    }
-
-    /// keyboard_press_normal
-    public static var keyboardPressNormal: SystemSoundKey {
-        .init(
-            name: "keyboard_press_normal",
-            id: 1130,
-            category: nil,
-            kind: .default
-        )
-    }
-
-    /// keyboard_press_delete
-    public static var keyboardPressDelete: SystemSoundKey {
-        .init(
-            name: "keyboard_press_delete",
-            id: 1131,
-            category: nil,
-            kind: .default
-        )
-    }
-
-    /// keyboard_press_clear
-    public static var keyboardPressClear: SystemSoundKey {
-        .init(
-            name: "keyboard_press_clear",
-            id: 1132,
-            category: nil,
-            kind: .default
-        )
-    }
-
-    /// RemoteAttentionRequest_Alert
-    @available(iOS 18.2, *)
-    public static var remoteAttentionRequestAlert: SystemSoundKey {
-        .init(
-            name: "RemoteAttentionRequest_Alert",
-            id: 1281,
-            category: nil,
-            kind: .default
-        )
-    }
-
     /// NFCCardProvisioned
     @available(iOS 18, *)
     public static var nfcCardProvisioned: SystemSoundKey {
@@ -5560,16 +5567,6 @@ extension SystemSoundKey {
         )
     }
 
-    /// ScreenCapture
-    public static var screenCapture: SystemSoundKey {
-        .init(
-            name: "ScreenCapture",
-            id: 1393,
-            category: nil,
-            kind: .nano
-        )
-    }
-
     /// acknowledgment_sent
     public static var acknowledgmentSent: SystemSoundKey {
         .init(
@@ -5634,8 +5631,8 @@ extension SystemSoundKey {
         ShakeToShuffle.allCases.map({ .shakeToShuffle($0) }) +
         BeginRecording.allCases.map({ .beginRecording($0) }) +
         EndRecording.allCases.map({ .endRecording($0) }) +
-        BeginVideoRecordingAlwaysHeard.allCases.map({ .beginVideoRecordingAlwaysHeard($0) }) +
-        EndVideoRecordingAlwaysHeard.allCases.map({ .endVideoRecordingAlwaysHeard($0) }) +
+        BeginVideoRecording.allCases.map({ .beginVideoRecording($0) }) +
+        EndVideoRecording.allCases.map({ .endVideoRecording($0) }) +
         CameraShutterAlt.allCases.map({ .cameraShutterAlt($0) }) +
         AirDropInvitation.allCases.map({ .airDropInvitation($0) }) +
         KeyPressClickRemote.allCases.map({ .keyPressClickRemote($0) }) +
@@ -5695,10 +5692,7 @@ extension SystemSoundKey {
         IdCardSenderConfirmationHaptic.allCases.map({ .idCardSenderConfirmationHaptic($0) }) +
         IdCardReceiverConfirmationHaptic.allCases.map({ .idCardReceiverConfirmationHaptic($0) }) +
         IdCardReceiverConnectHaptic.allCases.map({ .idCardReceiverConnectHaptic($0) }) +
-        [focusChangeKeyboard, focusChangeAppIcon, focusChangeLarge, focusChangeSmall, navigationPush, navigationPop, keyboardPressNormal, keyboardPressDelete, keyboardPressClear, connectPower, mediaPaused, mediaHandoff, screenCapture, acknowledgmentSent, acknowledgmentReceived, lowPower, failedUnlock, jblBegin, jblConfirm, jblCancel, jblAmbiguous, jblNoMatch, vcInvitationAccepted, vcRinging, vcEnded, goToSleepAlert, warsaw, pearlSuccess, pearlFailure, usbHardeningAlert, paymentReceived, ringerVibeChanged, silentVibeChanged, vibrateAlways, headphoneAudioExposureLimitExceeded, healthNotificationUrgent, navigationGenericManeuver, notificationHaptic, ringtoneUSHaptic, ringtoneUKHaptic, alarmHaptic, siriStartHaptic, siriStopSuccessHaptic, siriStopFailureHaptic, stockholmHaptic, beatHaptic, rubberBandHaptic, doNotDisturbHaptic, uiConfirmationHaptic, etHeartbeatHaptic, timerHaptic, navigationLeftTurnHaptic, navigationRightTurnHaptic, detentHaptic, navigationGenericManeuverHaptic, cameraCountdownTickHaptic, cameraCountdownImminentHaptic, etRemoteTapReceiveHaptic, etRemoteTapSendHaptic, etBeginNotificationHaptic, doNotDisturbExpiryWarningHaptic, stockholmActiveHaptic, stockholmActiveSingleCycleHaptic, stockholmFailureHaptic, sedentaryTimerHaptic, hourlyChimeHaptic, previewAudioAndHaptic, alertActivityGoalAttainedHaptic, alertActivityGoalBehindHaptic, alertActivityGoalCloseHaptic, alertCalendarHaptic, alertPassbookBalanceHaptic, alertPassbookGeofenceHaptic, alertPhotostreamActivityHaptic, alertReminderDueHaptic, alertWalkieTalkieHaptic, batteryMagsafeHaptic, buddyPairingFailureHaptic, buddyPairingSuccessHaptic, alertMapsDirectionsInAppHaptic, messagesIncomingHaptic, messagesOutgoingHaptic, onOffPasscodeFailureHaptic, orbInvokeHaptic, orbLayersHaptic, phoneHangUpHaptic, photosZoomDetentHaptic, qbDictationHaptic, springboardEdgeUniverseHaptic, springboardHardStopHaptic, stopwatchLapHaptic, stopwatchResetHaptic, stopwatchStartHaptic, stopwatchStopHaptic, timerCancelHaptic, timerPauseHaptic, timerStartHaptic, timerWheelHoursDetentHaptic, walkieTalkieActiveStartHaptic, workoutCompleteHaptic, workoutCountdownHaptic, alert3rdPartyHaptic, workoutSelectHaptic, workoutPressStartHaptic, clockAnalogTickHaptic, timerWheelMinutesDetentHaptic, phoneAnswerHaptic, phoneHoldHaptic, walkieTalkieActiveEndHaptic, uiSnapHaptic, uiSwitchOnHaptic, uiSwitchOffHaptic, uiSwipeHaptic, systemStartupHaptic, buddyPairingRemoteConnectionHaptic, buddyPairingRemoteTapHaptic, qbDictationOffHaptic, ringtoneDuckedUSHaptic, ringtoneDuckedUKHaptic, salientNotificationHaptic, notificationSalientHaptic, etBeginNotificationSalientHaptic, alertCalendarSalientHaptic, alertReminderDueSalientHaptic, alert3rdPartySalientHaptic, _3rdPartyDirectionUpHaptic, _3rdPartyDirectionDownHaptic, _3rdPartySuccessHaptic, _3rdPartyFailureHaptic, _3rdPartyRetryHaptic, _3rdPartyStartHaptic, _3rdPartyStopHaptic, alarmNightstandHaptic, navigationLeftTurnSalientHaptic, navigationRightTurnSalientHaptic, navigationGenericManeuverSalientHaptic, sedentaryTimerSalientHaptic, alertActivityGoalAttainedSalientHaptic, alertActivityGoalBehindSalientHaptic, alertPassbookGeofenceSalientHaptic, workoutSavedHaptic, orbPeekHaptic, orbPopHaptic, orbNegativeHaptic, voiceOverClickHaptic, siriAutoSendHaptic, hummingbirdCycleHaptic, hummingbirdCompletionHaptic, hummingbirdNotificationHaptic, remoteCameraShutterBurstBeginHaptic, remoteCameraShutterBurstEndHaptic, workoutPausedHaptic, workoutResumedHaptic, goToSleepHaptic, warsawHaptic, autoUnlockHaptic, alertActivityFriendsGoalAttainedHaptic, alertSpartanConnectingHaptic, alertSpartanConnectingLowLatencyHaptic, alertSpartanConnectedLowLatencyHaptic, alertSpartanDisconnectedLowLatencyHaptic, alertSpartanReminderEscalationLevel1Haptic, alertSpartanReminderEscalationLevel2Haptic, alertSpartanReminderEscalationLevel3Haptic, alertSpartanReminderEscalationLevel4Haptic, accessScanCompleteHaptic, buddyMigrationStartHaptic, sosFallDetectionPromptHaptic, sosEmergencyContactTextPromptHaptic, walkieTalkieReceiveStartHaptic, walkieTalkieReceiveEndHaptic, alertHealthHaptic, systemNotificationHaptic, sosFallDetectionPromptEscalationHaptic, walkAMileHaptic, healthReadingCompleteHaptic, healthReadingFailHaptic, vibrate]
-        if #available(iOS 18.2, *) {
-            result.append(.remoteAttentionRequestAlert)
-        }
+        [connectPower, mediaPaused, mediaHandoff, acknowledgmentSent, acknowledgmentReceived, lowPower, failedUnlock, jblBegin, jblConfirm, jblCancel, jblAmbiguous, jblNoMatch, focusChangeKeyboard, focusChangeAppIcon, focusChangeLarge, focusChangeSmall, navigationPush, navigationPop, keyboardPressNormal, keyboardPressDelete, keyboardPressClear, vcInvitationAccepted, vcRinging, vcEnded, goToSleepAlert, warsaw, pearlSuccess, pearlFailure, usbHardeningAlert, paymentReceived, ringerVibeChanged, silentVibeChanged, vibrateAlways, headphoneAudioExposureLimitExceeded, healthNotificationUrgent, navigationGenericManeuver, notificationHaptic, ringtoneUSHaptic, ringtoneUKHaptic, alarmHaptic, siriStartHaptic, siriStopSuccessHaptic, siriStopFailureHaptic, stockholmHaptic, beatHaptic, rubberBandHaptic, doNotDisturbHaptic, uiConfirmationHaptic, etHeartbeatHaptic, timerHaptic, navigationLeftTurnHaptic, navigationRightTurnHaptic, detentHaptic, navigationGenericManeuverHaptic, cameraCountdownTickHaptic, cameraCountdownImminentHaptic, etRemoteTapReceiveHaptic, etRemoteTapSendHaptic, etBeginNotificationHaptic, doNotDisturbExpiryWarningHaptic, stockholmActiveHaptic, stockholmActiveSingleCycleHaptic, stockholmFailureHaptic, sedentaryTimerHaptic, hourlyChimeHaptic, previewAudioAndHaptic, alertActivityGoalAttainedHaptic, alertActivityGoalBehindHaptic, alertActivityGoalCloseHaptic, alertCalendarHaptic, alertPassbookBalanceHaptic, alertPassbookGeofenceHaptic, alertPhotostreamActivityHaptic, alertReminderDueHaptic, alertWalkieTalkieHaptic, batteryMagsafeHaptic, buddyPairingFailureHaptic, buddyPairingSuccessHaptic, alertMapsDirectionsInAppHaptic, messagesIncomingHaptic, messagesOutgoingHaptic, onOffPasscodeFailureHaptic, orbInvokeHaptic, orbLayersHaptic, phoneHangUpHaptic, photosZoomDetentHaptic, qbDictationHaptic, springboardEdgeUniverseHaptic, springboardHardStopHaptic, stopwatchLapHaptic, stopwatchResetHaptic, stopwatchStartHaptic, stopwatchStopHaptic, timerCancelHaptic, timerPauseHaptic, timerStartHaptic, timerWheelHoursDetentHaptic, walkieTalkieActiveStartHaptic, workoutCompleteHaptic, workoutCountdownHaptic, alert3rdPartyHaptic, workoutSelectHaptic, workoutPressStartHaptic, clockAnalogTickHaptic, timerWheelMinutesDetentHaptic, phoneAnswerHaptic, phoneHoldHaptic, walkieTalkieActiveEndHaptic, uiSnapHaptic, uiSwitchOnHaptic, uiSwitchOffHaptic, uiSwipeHaptic, systemStartupHaptic, buddyPairingRemoteConnectionHaptic, buddyPairingRemoteTapHaptic, qbDictationOffHaptic, ringtoneDuckedUSHaptic, ringtoneDuckedUKHaptic, salientNotificationHaptic, notificationSalientHaptic, etBeginNotificationSalientHaptic, alertCalendarSalientHaptic, alertReminderDueSalientHaptic, alert3rdPartySalientHaptic, _3rdPartyDirectionUpHaptic, _3rdPartyDirectionDownHaptic, _3rdPartySuccessHaptic, _3rdPartyFailureHaptic, _3rdPartyRetryHaptic, _3rdPartyStartHaptic, _3rdPartyStopHaptic, alarmNightstandHaptic, navigationLeftTurnSalientHaptic, navigationRightTurnSalientHaptic, navigationGenericManeuverSalientHaptic, sedentaryTimerSalientHaptic, alertActivityGoalAttainedSalientHaptic, alertActivityGoalBehindSalientHaptic, alertPassbookGeofenceSalientHaptic, workoutSavedHaptic, orbPeekHaptic, orbPopHaptic, orbNegativeHaptic, voiceOverClickHaptic, siriAutoSendHaptic, hummingbirdCycleHaptic, hummingbirdCompletionHaptic, hummingbirdNotificationHaptic, remoteCameraShutterBurstBeginHaptic, remoteCameraShutterBurstEndHaptic, workoutPausedHaptic, workoutResumedHaptic, goToSleepHaptic, warsawHaptic, autoUnlockHaptic, alertActivityFriendsGoalAttainedHaptic, alertSpartanConnectingHaptic, alertSpartanConnectingLowLatencyHaptic, alertSpartanConnectedLowLatencyHaptic, alertSpartanDisconnectedLowLatencyHaptic, alertSpartanReminderEscalationLevel1Haptic, alertSpartanReminderEscalationLevel2Haptic, alertSpartanReminderEscalationLevel3Haptic, alertSpartanReminderEscalationLevel4Haptic, accessScanCompleteHaptic, buddyMigrationStartHaptic, sosFallDetectionPromptHaptic, sosEmergencyContactTextPromptHaptic, walkieTalkieReceiveStartHaptic, walkieTalkieReceiveEndHaptic, alertHealthHaptic, systemNotificationHaptic, sosFallDetectionPromptEscalationHaptic, walkAMileHaptic, healthReadingCompleteHaptic, healthReadingFailHaptic, vibrate]
         if #available(iOS 18, *) {
             result.append(.nfcCardProvisioned)
         }
@@ -5764,6 +5758,9 @@ extension SystemSoundKey {
         }
         if #available(iOS 18, *) {
             result.append(.dictationConfirm)
+        }
+        if #available(iOS 18.2, *) {
+            result.append(.remoteAttentionRequestAlert)
         }
         if #available(iOS 16, *) {
             result.append(.pinEnterDigitAX)
