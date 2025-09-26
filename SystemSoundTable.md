@@ -6,7 +6,7 @@
 | 33 | busy_tone_cept.caf | InCallSystemSound | nano | |
 | 34 | call_waiting_tone_ansi.caf | InCallSystemSound | nano | |
 | 35 | call_waiting_tone_cept.caf | InCallSystemSound | nano | |
-| 36 | end_call_tone_cept.caf | InCallSystemSound | nano | |
+| 36 | end_call_tone_cept.caf | EndOfCallTone_CEPT(iOS26~) InCallSystemSound(~iOS18) | nano | |
 | 37 | ringback_tone_hk.caf | InCallSystemSound | nano | |
 | 38 | ringback_tone_aus.caf | InCallSystemSound | nano | |
 | 39 | ringback_tone_uk.caf | InCallSystemSound | nano | |
@@ -93,6 +93,9 @@
 | 1130 | keyboard_press_normal.caf | KeyboardPressNormal | default | |
 | 1131 | keyboard_press_delete.caf | KeyboardPressDelete | default | |
 | 1132 | keyboard_press_clear.caf | KeyboardPressClear | default | |
+| 1133 | photoShutter.caf | - | default |iOS26~ |
+| 1134 | begin_record.caf | - | default | iOS26~ |
+| 1135 | end_record.caf | - | default | iOS26~ |
 | 1150 | vc~invitation-accepted.caf | VCInvitationAccepted | nano | |
 | 1151 | vc~ringing.caf | VCRinging | nano | |
 | 1152 | vc~ended.caf | VCEnded | nano | |
@@ -193,9 +196,9 @@
 | 1343 | PINUnexpected.caf | PINUnexpected | default | iOS16~ |
 | 1344 | PINEnterDigit.caf | PINEnterDigit | default | iOS16~ |
 | 1345 | PINDelete.caf | PINDelete | default | iOS16~ |
-| 1346 | NFCCardProvisioned.caf | - | default | iOS18~ |
-| 1347 | NFCCardComplete.caf | - | default | iOS18~ |
-| 1348 | NFCCardError.caf | - | default | iOS18~ |
+| 1346 | NFCCardProvisioned.caf | NFCCardProvisioned(iOS26~) | default | iOS18~ |
+| 1347 | NFCCardComplete.caf | NFCCardComplete(iOS26~) | default | iOS18~ |
+| 1348 | NFCCardError.caf | NFCCardError(iOS26~) | default | iOS18~ |
 | 1350 | - | RingerVibeChanged | - | |
 | 1351 | - | SilentVibeChanged | - | |
 | 1352 | - | VibrateAlways | - | |
@@ -214,6 +217,9 @@
 | 1372 | HeadGesturesDoubleShake.caf | - | nano | iOS18~ |
 | 1373 | HeadGesturesPartialNod.caf | - | nano | iOS18~ |
 | 1374 | HeadGesturesPartialShake.caf | - | nano | iOS18~ |
+| 1390 | LiveTranslationStart.caf | PersonalTranslator | default | iOS26~ |
+| 1391 | LiveTranslationStop.caf | PersonalTranslator | default | iOS26~ |
+| 1392 | DualBudLongPressFailure.caf | PersonalTranslator | default | iOS26~ |
 | 1393 | ScreenCapture.caf | CameraShutterAlt | nano | |
 | 1394 | payment_success.caf | PaymentSuccess | default | |
 | 1395 | payment_failure.caf | PaymentFailure | default | |
@@ -406,10 +412,7 @@
 | 1586 | ReceiverConfirmation.caf | IDCard_Receiver_Confirmation_Haptic | nano | iOS17~ |
 | 1587 | ReceiverConnect.caf | IDCard_Receiver_Connect_Haptic | nano | iOS17~ |
 | 1588 | RegattaTimer.caf | - | nano | iOS18~ |
-| 3000 | - | RelTest1_Haptic | - | |
-| 3001 | SwTest1_Haptic.caf | unknown | nano | |
-| 3002 | - | SwTest2_Haptic | | |
-| 3003 | - | MMITest1_Haptic | | |
+| 1589 | SatelliteMessageSent.caf | Satellite_Message_Sent_Haptic | nano | iOS26~ |
 | 3100 | - | AudioPrewarm | | iOS16~ |
 | 3101 | - | HapticPrewarm | | iOS16~ |
 | 4095 | - | Vibrate | | |
