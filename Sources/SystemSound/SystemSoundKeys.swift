@@ -171,6 +171,38 @@ extension SystemSoundKey {
         )
     }
 
+    /// EndOfCallTone_CEPT'
+    public struct EndOfCallToneCEPT: CaseIterable {
+        public static let categoryName = "EndOfCallTone_CEPT"
+
+        public let name: String
+        public let id: Int
+        public let kind: SystemSoundKind
+
+        public static var allCases: [Self] {
+            var result: [Self] = []
+            if #available(iOS 26, *) { result.append(.endCallToneCept) }
+            return result
+        }
+
+        /// end_call_tone_cept (EndOfCallTone_CEPT)
+        @available(iOS 26, *)
+        public static let endCallToneCept: Self = .init(
+            name: "end_call_tone_cept",
+            id: 36,
+            kind: .nano
+        )
+    }
+
+    public static func endOfCallToneCEPT(_ soundId: EndOfCallToneCEPT) -> SystemSoundKey {
+        .init(
+            name: soundId.name,
+            id: soundId.id,
+            category: EndOfCallToneCEPT.categoryName,
+            kind: soundId.kind
+        )
+    }
+
     /// MailReceived
     public struct MailReceived: CaseIterable {
         public static let categoryName = "MailReceived"
@@ -2818,6 +2850,39 @@ extension SystemSoundKey {
         )
     }
 
+    /// NFCCardProvisioned (NFCCardProvisioned)
+    @available(iOS 18, *)
+    public static var nfcCardProvisioned: SystemSoundKey {
+        .init(
+            name: "NFCCardProvisioned",
+            id: 1346,
+            category: "NFCCardProvisioned", // (nil ~iOS18)
+            kind: .default
+        )
+    }
+
+    /// NFCCardComplete (NFCCardComplete)
+    @available(iOS 18, *)
+    public static var nfcCardComplete: SystemSoundKey {
+        .init(
+            name: "NFCCardComplete",
+            id: 1347,
+            category: "NFCCardComplete", // (nil ~iOS18)
+            kind: .default
+        )
+    }
+
+    /// NFCCardError (NFCCardError)
+    @available(iOS 18, *)
+    public static var nfcCardError: SystemSoundKey {
+        .init(
+            name: "NFCCardError",
+            id: 1348,
+            category: "NFCCardError", // (nil ~iOS18)
+            kind: .default
+        )
+    }
+
     ///  (RingerVibeChanged)
     public static var ringerVibeChanged: SystemSoundKey {
         .init(
@@ -2875,6 +2940,56 @@ extension SystemSoundKey {
             id: 1370,
             category: "NavigationGenericManeuver",
             kind: .default
+        )
+    }
+
+    /// PersonalTranslator
+    public struct PersonalTranslator: CaseIterable {
+        public static let categoryName = "PersonalTranslator"
+
+        public let name: String
+        public let id: Int
+        public let kind: SystemSoundKind
+
+        public static var allCases: [Self] {
+            var result: [Self] = []
+            if #available(iOS 26, *) { result.append(.liveTranslationStart) }
+            if #available(iOS 26, *) { result.append(.liveTranslationStop) }
+            if #available(iOS 26, *) { result.append(.dualBudLongPressFailure) }
+            return result
+        }
+
+        /// LiveTranslationStart (PersonalTranslator)
+        @available(iOS 26, *)
+        public static let liveTranslationStart: Self = .init(
+            name: "LiveTranslationStart",
+            id: 1390,
+            kind: .default
+        )
+
+        /// LiveTranslationStop (PersonalTranslator)
+        @available(iOS 26, *)
+        public static let liveTranslationStop: Self = .init(
+            name: "LiveTranslationStop",
+            id: 1391,
+            kind: .default
+        )
+
+        /// DualBudLongPressFailure (PersonalTranslator)
+        @available(iOS 26, *)
+        public static let dualBudLongPressFailure: Self = .init(
+            name: "DualBudLongPressFailure",
+            id: 1392,
+            kind: .default
+        )
+    }
+
+    public static func personalTranslator(_ soundId: PersonalTranslator) -> SystemSoundKey {
+        .init(
+            name: soundId.name,
+            id: soundId.id,
+            category: PersonalTranslator.categoryName,
+            kind: soundId.kind
         )
     }
 
@@ -5428,6 +5543,38 @@ extension SystemSoundKey {
         )
     }
 
+    /// Satellite_Message_Sent_Haptic
+    public struct SatelliteMessageSentHaptic: CaseIterable {
+        public static let categoryName = "Satellite_Message_Sent_Haptic"
+
+        public let name: String
+        public let id: Int
+        public let kind: SystemSoundKind
+
+        public static var allCases: [Self] {
+            var result: [Self] = []
+            if #available(iOS 26, *) { result.append(.satelliteMessageSent) }
+            return result
+        }
+
+        /// SatelliteMessageSent (Satellite_Message_Sent_Haptic)
+        @available(iOS 26, *)
+        public static let satelliteMessageSent: Self = .init(
+            name: "SatelliteMessageSent",
+            id: 1589,
+            kind: .nano
+        )
+    }
+
+    public static func satelliteMessageSentHaptic(_ soundId: SatelliteMessageSentHaptic) -> SystemSoundKey {
+        .init(
+            name: soundId.name,
+            id: soundId.id,
+            category: SatelliteMessageSentHaptic.categoryName,
+            kind: soundId.kind
+        )
+    }
+
     ///  (AudioPrewarm)
     @available(iOS 16, *)
     public static var audioPrewarm: SystemSoundKey {
@@ -5460,34 +5607,34 @@ extension SystemSoundKey {
         )
     }
 
-    /// NFCCardProvisioned
-    @available(iOS 18, *)
-    public static var nfcCardProvisioned: SystemSoundKey {
+    /// photoShutter
+    @available(iOS 26, *)
+    public static var photoShutter: SystemSoundKey {
         .init(
-            name: "NFCCardProvisioned",
-            id: 1346,
+            name: "photoShutter",
+            id: 1133,
             category: nil,
             kind: .default
         )
     }
 
-    /// NFCCardComplete
-    @available(iOS 18, *)
-    public static var nfcCardComplete: SystemSoundKey {
+    /// begin_record
+    @available(iOS 26, *)
+    public static var beginRecord: SystemSoundKey {
         .init(
-            name: "NFCCardComplete",
-            id: 1347,
+            name: "begin_record",
+            id: 1134,
             category: nil,
             kind: .default
         )
     }
 
-    /// NFCCardError
-    @available(iOS 18, *)
-    public static var nfcCardError: SystemSoundKey {
+    /// end_record
+    @available(iOS 26, *)
+    public static var endRecord: SystemSoundKey {
         .init(
-            name: "NFCCardError",
-            id: 1348,
+            name: "end_record",
+            id: 1135,
             category: nil,
             kind: .default
         )
@@ -5602,6 +5749,7 @@ extension SystemSoundKey {
 extension SystemSoundKey {
     public static var allCases: [Self] {
         var result = InCallSystemSound.allCases.map({ .inCallSystemSound($0) }) +
+        EndOfCallToneCEPT.allCases.map({ .endOfCallToneCEPT($0) }) +
         MailReceived.allCases.map({ .mailReceived($0) }) +
         MailSent.allCases.map({ .mailSent($0) }) +
         VoicemailReceived.allCases.map({ .voicemailReceived($0) }) +
@@ -5657,6 +5805,7 @@ extension SystemSoundKey {
         KeyPressClickPreview.allCases.map({ .keyPressClickPreview($0) }) +
         SMSReceivedSelection.allCases.map({ .smsReceivedSelection($0) }) +
         SystemSoundPreviewIgnoreRingerSwitchNoVibe.allCases.map({ .systemSoundPreviewIgnoreRingerSwitchNoVibe($0) }) +
+        PersonalTranslator.allCases.map({ .personalTranslator($0) }) +
         PaymentFailure.allCases.map({ .paymentFailure($0) }) +
         AlertBatteryLowHaptic.allCases.map({ .alertBatteryLowHaptic($0) }) +
         AlertBatteryCriticalHaptic.allCases.map({ .alertBatteryCriticalHaptic($0) }) +
@@ -5692,7 +5841,17 @@ extension SystemSoundKey {
         IdCardSenderConfirmationHaptic.allCases.map({ .idCardSenderConfirmationHaptic($0) }) +
         IdCardReceiverConfirmationHaptic.allCases.map({ .idCardReceiverConfirmationHaptic($0) }) +
         IdCardReceiverConnectHaptic.allCases.map({ .idCardReceiverConnectHaptic($0) }) +
+        SatelliteMessageSentHaptic.allCases.map({ .satelliteMessageSentHaptic($0) }) +
         [connectPower, mediaPaused, mediaHandoff, acknowledgmentSent, acknowledgmentReceived, lowPower, failedUnlock, jblBegin, jblConfirm, jblCancel, jblAmbiguous, jblNoMatch, focusChangeKeyboard, focusChangeAppIcon, focusChangeLarge, focusChangeSmall, navigationPush, navigationPop, keyboardPressNormal, keyboardPressDelete, keyboardPressClear, vcInvitationAccepted, vcRinging, vcEnded, goToSleepAlert, warsaw, pearlSuccess, pearlFailure, usbHardeningAlert, paymentReceived, ringerVibeChanged, silentVibeChanged, vibrateAlways, headphoneAudioExposureLimitExceeded, healthNotificationUrgent, navigationGenericManeuver, notificationHaptic, ringtoneUSHaptic, ringtoneUKHaptic, alarmHaptic, siriStartHaptic, siriStopSuccessHaptic, siriStopFailureHaptic, stockholmHaptic, beatHaptic, rubberBandHaptic, doNotDisturbHaptic, uiConfirmationHaptic, etHeartbeatHaptic, timerHaptic, navigationLeftTurnHaptic, navigationRightTurnHaptic, detentHaptic, navigationGenericManeuverHaptic, cameraCountdownTickHaptic, cameraCountdownImminentHaptic, etRemoteTapReceiveHaptic, etRemoteTapSendHaptic, etBeginNotificationHaptic, doNotDisturbExpiryWarningHaptic, stockholmActiveHaptic, stockholmActiveSingleCycleHaptic, stockholmFailureHaptic, sedentaryTimerHaptic, hourlyChimeHaptic, previewAudioAndHaptic, alertActivityGoalAttainedHaptic, alertActivityGoalBehindHaptic, alertActivityGoalCloseHaptic, alertCalendarHaptic, alertPassbookBalanceHaptic, alertPassbookGeofenceHaptic, alertPhotostreamActivityHaptic, alertReminderDueHaptic, alertWalkieTalkieHaptic, batteryMagsafeHaptic, buddyPairingFailureHaptic, buddyPairingSuccessHaptic, alertMapsDirectionsInAppHaptic, messagesIncomingHaptic, messagesOutgoingHaptic, onOffPasscodeFailureHaptic, orbInvokeHaptic, orbLayersHaptic, phoneHangUpHaptic, photosZoomDetentHaptic, qbDictationHaptic, springboardEdgeUniverseHaptic, springboardHardStopHaptic, stopwatchLapHaptic, stopwatchResetHaptic, stopwatchStartHaptic, stopwatchStopHaptic, timerCancelHaptic, timerPauseHaptic, timerStartHaptic, timerWheelHoursDetentHaptic, walkieTalkieActiveStartHaptic, workoutCompleteHaptic, workoutCountdownHaptic, alert3rdPartyHaptic, workoutSelectHaptic, workoutPressStartHaptic, clockAnalogTickHaptic, timerWheelMinutesDetentHaptic, phoneAnswerHaptic, phoneHoldHaptic, walkieTalkieActiveEndHaptic, uiSnapHaptic, uiSwitchOnHaptic, uiSwitchOffHaptic, uiSwipeHaptic, systemStartupHaptic, buddyPairingRemoteConnectionHaptic, buddyPairingRemoteTapHaptic, qbDictationOffHaptic, ringtoneDuckedUSHaptic, ringtoneDuckedUKHaptic, salientNotificationHaptic, notificationSalientHaptic, etBeginNotificationSalientHaptic, alertCalendarSalientHaptic, alertReminderDueSalientHaptic, alert3rdPartySalientHaptic, _3rdPartyDirectionUpHaptic, _3rdPartyDirectionDownHaptic, _3rdPartySuccessHaptic, _3rdPartyFailureHaptic, _3rdPartyRetryHaptic, _3rdPartyStartHaptic, _3rdPartyStopHaptic, alarmNightstandHaptic, navigationLeftTurnSalientHaptic, navigationRightTurnSalientHaptic, navigationGenericManeuverSalientHaptic, sedentaryTimerSalientHaptic, alertActivityGoalAttainedSalientHaptic, alertActivityGoalBehindSalientHaptic, alertPassbookGeofenceSalientHaptic, workoutSavedHaptic, orbPeekHaptic, orbPopHaptic, orbNegativeHaptic, voiceOverClickHaptic, siriAutoSendHaptic, hummingbirdCycleHaptic, hummingbirdCompletionHaptic, hummingbirdNotificationHaptic, remoteCameraShutterBurstBeginHaptic, remoteCameraShutterBurstEndHaptic, workoutPausedHaptic, workoutResumedHaptic, goToSleepHaptic, warsawHaptic, autoUnlockHaptic, alertActivityFriendsGoalAttainedHaptic, alertSpartanConnectingHaptic, alertSpartanConnectingLowLatencyHaptic, alertSpartanConnectedLowLatencyHaptic, alertSpartanDisconnectedLowLatencyHaptic, alertSpartanReminderEscalationLevel1Haptic, alertSpartanReminderEscalationLevel2Haptic, alertSpartanReminderEscalationLevel3Haptic, alertSpartanReminderEscalationLevel4Haptic, accessScanCompleteHaptic, buddyMigrationStartHaptic, sosFallDetectionPromptHaptic, sosEmergencyContactTextPromptHaptic, walkieTalkieReceiveStartHaptic, walkieTalkieReceiveEndHaptic, alertHealthHaptic, systemNotificationHaptic, sosFallDetectionPromptEscalationHaptic, walkAMileHaptic, healthReadingCompleteHaptic, healthReadingFailHaptic, vibrate]
+        if #available(iOS 26, *) {
+            result.append(.photoShutter)
+        }
+        if #available(iOS 26, *) {
+            result.append(.beginRecord)
+        }
+        if #available(iOS 26, *) {
+            result.append(.endRecord)
+        }
         if #available(iOS 18, *) {
             result.append(.nfcCardProvisioned)
         }
