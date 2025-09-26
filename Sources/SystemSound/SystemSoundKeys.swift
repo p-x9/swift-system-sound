@@ -92,6 +92,7 @@ extension SystemSoundKey {
         )
 
         /// end_call_tone_cept (InCallSystemSound)
+        @available(iOS, deprecated: 26.0, renamed: "EndOfCallToneCEPT.endCallToneCept", message: "Category is changed to `EndOfCallToneCEPT`")
         public static let endCallToneCept: Self = .init(
             name: "end_call_tone_cept",
             id: 36,
