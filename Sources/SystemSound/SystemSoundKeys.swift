@@ -1,6 +1,6 @@
 import AudioToolbox
 
-public struct SystemSoundKey: CaseIterable, Equatable, Codable, Hashable {
+public struct SystemSoundKey: CaseIterable, Sendable, Equatable, Codable, Hashable {
     public let name: String
     public let id: Int
     public let category: String?
@@ -38,7 +38,7 @@ extension SystemSoundKey {
 
 extension SystemSoundKey {
     /// InCallSystemSound
-    public struct InCallSystemSound: CaseIterable {
+    public struct InCallSystemSound: CaseIterable, Sendable {
         public static let categoryName = "InCallSystemSound"
 
         public let name: String
@@ -173,7 +173,7 @@ extension SystemSoundKey {
     }
 
     /// EndOfCallTone_CEPT'
-    public struct EndOfCallToneCEPT: CaseIterable {
+    public struct EndOfCallToneCEPT: CaseIterable, Sendable {
         public static let categoryName = "EndOfCallTone_CEPT"
 
         public let name: String
@@ -205,7 +205,7 @@ extension SystemSoundKey {
     }
 
     /// MailReceived
-    public struct MailReceived: CaseIterable {
+    public struct MailReceived: CaseIterable, Sendable {
         public static let categoryName = "MailReceived"
 
         public let name: String
@@ -234,7 +234,7 @@ extension SystemSoundKey {
     }
 
     /// MailSent
-    public struct MailSent: CaseIterable {
+    public struct MailSent: CaseIterable, Sendable {
         public static let categoryName = "MailSent"
 
         public let name: String
@@ -277,7 +277,7 @@ extension SystemSoundKey {
     }
 
     /// VoicemailReceived
-    public struct VoicemailReceived: CaseIterable {
+    public struct VoicemailReceived: CaseIterable, Sendable {
         public static let categoryName = "VoicemailReceived"
 
         public let name: String
@@ -306,7 +306,7 @@ extension SystemSoundKey {
     }
 
     /// SMSReceived
-    public struct SMSReceived: CaseIterable {
+    public struct SMSReceived: CaseIterable, Sendable {
         public static let categoryName = "SMSReceived"
 
         public let name: String
@@ -335,7 +335,7 @@ extension SystemSoundKey {
     }
 
     /// SMSSent
-    public struct SMSSent: CaseIterable {
+    public struct SMSSent: CaseIterable, Sendable {
         public static let categoryName = "SMSSent"
 
         public let name: String
@@ -364,7 +364,7 @@ extension SystemSoundKey {
     }
 
     /// CalendarAlert
-    public struct CalendarAlert: CaseIterable {
+    public struct CalendarAlert: CaseIterable, Sendable {
         public static let categoryName = "CalendarAlert"
 
         public let name: String
@@ -403,7 +403,7 @@ extension SystemSoundKey {
     }
 
     /// SMSReceived_Alert
-    public struct SMSReceivedAlert: CaseIterable {
+    public struct SMSReceivedAlert: CaseIterable, Sendable {
         public static let categoryName = "SMSReceived_Alert"
 
         public let name: String
@@ -586,7 +586,7 @@ extension SystemSoundKey {
     }
 
     /// SMSReceived_Vibrate
-    public struct SMSReceivedVibrate: CaseIterable {
+    public struct SMSReceivedVibrate: CaseIterable, Sendable {
         public static let categoryName = "SMSReceived_Vibrate"
 
         public let name: String
@@ -615,7 +615,7 @@ extension SystemSoundKey {
     }
 
     /// UserAlert
-    public struct UserAlert: CaseIterable {
+    public struct UserAlert: CaseIterable, Sendable {
         public static let categoryName = "UserAlert"
 
         public let name: String
@@ -651,7 +651,7 @@ extension SystemSoundKey {
     }
 
     /// ReminderAlert
-    public struct ReminderAlert: CaseIterable {
+    public struct ReminderAlert: CaseIterable, Sendable {
         public static let categoryName = "ReminderAlert"
 
         public let name: String
@@ -680,7 +680,7 @@ extension SystemSoundKey {
     }
 
     /// USSDAlert
-    public struct UssdAlert: CaseIterable {
+    public struct UssdAlert: CaseIterable, Sendable {
         public static let categoryName = "USSDAlert"
 
         public let name: String
@@ -709,7 +709,7 @@ extension SystemSoundKey {
     }
 
     /// SIMToolkitTone
-    public struct SimToolkitTone: CaseIterable {
+    public struct SimToolkitTone: CaseIterable, Sendable {
         public static let categoryName = "SIMToolkitTone"
 
         public let name: String
@@ -766,7 +766,7 @@ extension SystemSoundKey {
     }
 
     /// PINKeyPressed
-    public struct PinKeyPressed: CaseIterable {
+    public struct PinKeyPressed: CaseIterable, Sendable {
         public static let categoryName = "PINKeyPressed"
 
         public let name: String
@@ -795,7 +795,7 @@ extension SystemSoundKey {
     }
 
     /// WebcamStartAlwaysHeard
-    public struct WebcamStartAlwaysHeard: CaseIterable {
+    public struct WebcamStartAlwaysHeard: CaseIterable, Sendable {
         public static let categoryName = "WebcamStartAlwaysHeard"
 
         public let name: String
@@ -827,7 +827,7 @@ extension SystemSoundKey {
     }
 
     /// LiquidDetectedAlwaysHeard
-    public struct LiquidDetectedAlwaysHeard: CaseIterable {
+    public struct LiquidDetectedAlwaysHeard: CaseIterable, Sendable {
         public static let categoryName = "LiquidDetectedAlwaysHeard"
 
         public let name: String
@@ -859,7 +859,7 @@ extension SystemSoundKey {
     }
 
     /// AudioToneBusy
-    public struct AudioToneBusy: CaseIterable {
+    public struct AudioToneBusy: CaseIterable, Sendable {
         public static let categoryName = "AudioToneBusy"
 
         public let name: String
@@ -888,7 +888,7 @@ extension SystemSoundKey {
     }
 
     /// AudioToneCongestion
-    public struct AudioToneCongestion: CaseIterable {
+    public struct AudioToneCongestion: CaseIterable, Sendable {
         public static let categoryName = "AudioToneCongestion"
 
         public let name: String
@@ -917,7 +917,7 @@ extension SystemSoundKey {
     }
 
     /// AudioTonePathAcknowledge
-    public struct AudioTonePathAcknowledge: CaseIterable {
+    public struct AudioTonePathAcknowledge: CaseIterable, Sendable {
         public static let categoryName = "AudioTonePathAcknowledge"
 
         public let name: String
@@ -946,7 +946,7 @@ extension SystemSoundKey {
     }
 
     /// AudioToneError
-    public struct AudioToneError: CaseIterable {
+    public struct AudioToneError: CaseIterable, Sendable {
         public static let categoryName = "AudioToneError"
 
         public let name: String
@@ -975,7 +975,7 @@ extension SystemSoundKey {
     }
 
     /// AudioToneCallWaiting
-    public struct AudioToneCallWaiting: CaseIterable {
+    public struct AudioToneCallWaiting: CaseIterable, Sendable {
         public static let categoryName = "AudioToneCallWaiting"
 
         public let name: String
@@ -1004,7 +1004,7 @@ extension SystemSoundKey {
     }
 
     /// AudioToneKey2
-    public struct AudioToneKey2: CaseIterable {
+    public struct AudioToneKey2: CaseIterable, Sendable {
         public static let categoryName = "AudioToneKey2"
 
         public let name: String
@@ -1033,7 +1033,7 @@ extension SystemSoundKey {
     }
 
     /// ScreenLocked
-    public struct ScreenLocked: CaseIterable {
+    public struct ScreenLocked: CaseIterable, Sendable {
         public static let categoryName = "ScreenLocked"
 
         public let name: String
@@ -1072,7 +1072,7 @@ extension SystemSoundKey {
     }
 
     /// KeyPressed
-    public struct KeyPressed: CaseIterable {
+    public struct KeyPressed: CaseIterable, Sendable {
         public static let categoryName = "KeyPressed"
 
         public let name: String
@@ -1136,7 +1136,7 @@ extension SystemSoundKey {
     }
 
     /// ConnectedToPower
-    public struct ConnectedToPower: CaseIterable {
+    public struct ConnectedToPower: CaseIterable, Sendable {
         public static let categoryName = "ConnectedToPower"
 
         public let name: String
@@ -1165,7 +1165,7 @@ extension SystemSoundKey {
     }
 
     /// RingerSwitchIndication
-    public struct RingerSwitchIndication: CaseIterable {
+    public struct RingerSwitchIndication: CaseIterable, Sendable {
         public static let categoryName = "RingerSwitchIndication"
 
         public let name: String
@@ -1194,7 +1194,7 @@ extension SystemSoundKey {
     }
 
     /// CameraShutter
-    public struct CameraShutter: CaseIterable {
+    public struct CameraShutter: CaseIterable, Sendable {
         public static let categoryName = "CameraShutter"
 
         public let name: String
@@ -1223,7 +1223,7 @@ extension SystemSoundKey {
     }
 
     /// ShakeToShuffle
-    public struct ShakeToShuffle: CaseIterable {
+    public struct ShakeToShuffle: CaseIterable, Sendable {
         public static let categoryName = "ShakeToShuffle"
 
         public let name: String
@@ -1282,7 +1282,7 @@ extension SystemSoundKey {
     }
 
     /// BeginRecording
-    public struct BeginRecording: CaseIterable {
+    public struct BeginRecording: CaseIterable, Sendable {
         public static let categoryName = "BeginRecording"
 
         public let name: String
@@ -1311,7 +1311,7 @@ extension SystemSoundKey {
     }
 
     /// EndRecording
-    public struct EndRecording: CaseIterable {
+    public struct EndRecording: CaseIterable, Sendable {
         public static let categoryName = "EndRecording"
 
         public let name: String
@@ -1360,7 +1360,7 @@ extension SystemSoundKey {
     }
 
     /// BeginVideoRecording
-    public struct BeginVideoRecording: CaseIterable {
+    public struct BeginVideoRecording: CaseIterable, Sendable {
         public static let categoryName = "BeginVideoRecording"
 
         public let name: String
@@ -1389,7 +1389,7 @@ extension SystemSoundKey {
     }
 
     /// EndVideoRecording
-    public struct EndVideoRecording: CaseIterable {
+    public struct EndVideoRecording: CaseIterable, Sendable {
         public static let categoryName = "EndVideoRecording"
 
         public let name: String
@@ -1418,7 +1418,7 @@ extension SystemSoundKey {
     }
 
     /// CameraShutterAlt
-    public struct CameraShutterAlt: CaseIterable {
+    public struct CameraShutterAlt: CaseIterable, Sendable {
         public static let categoryName = "CameraShutterAlt"
 
         public let name: String
@@ -1482,7 +1482,7 @@ extension SystemSoundKey {
     }
 
     /// AirDropInvitation
-    public struct AirDropInvitation: CaseIterable {
+    public struct AirDropInvitation: CaseIterable, Sendable {
         public static let categoryName = "AirDropInvitation"
 
         public let name: String
@@ -1514,7 +1514,7 @@ extension SystemSoundKey {
     }
 
     /// KeyPressClick_Remote
-    public struct KeyPressClickRemote: CaseIterable {
+    public struct KeyPressClickRemote: CaseIterable, Sendable {
         public static let categoryName = "KeyPressClick_Remote"
 
         public let name: String
@@ -1663,7 +1663,7 @@ extension SystemSoundKey {
     }
 
     /// VCCallWaiting
-    public struct VCCallWaiting: CaseIterable {
+    public struct VCCallWaiting: CaseIterable, Sendable {
         public static let categoryName = "VCCallWaiting"
 
         public let name: String
@@ -1692,7 +1692,7 @@ extension SystemSoundKey {
     }
 
     /// VCCallUpgrade
-    public struct VCCallUpgrade: CaseIterable {
+    public struct VCCallUpgrade: CaseIterable, Sendable {
         public static let categoryName = "VCCallUpgrade"
 
         public let name: String
@@ -1741,7 +1741,7 @@ extension SystemSoundKey {
     }
 
     /// PaymentSuccess
-    public struct PaymentSuccess: CaseIterable {
+    public struct PaymentSuccess: CaseIterable, Sendable {
         public static let categoryName = "PaymentSuccess"
 
         public let name: String
@@ -1814,7 +1814,7 @@ extension SystemSoundKey {
     }
 
     /// Critical_Alert
-    public struct CriticalAlert: CaseIterable {
+    public struct CriticalAlert: CaseIterable, Sendable {
         public static let categoryName = "Critical_Alert"
 
         public let name: String
@@ -1908,7 +1908,7 @@ extension SystemSoundKey {
     }
 
     /// TouchTone
-    public struct TouchTone: CaseIterable {
+    public struct TouchTone: CaseIterable, Sendable {
         public static let categoryName = "TouchTone"
 
         public let name: String
@@ -2025,7 +2025,7 @@ extension SystemSoundKey {
     }
 
     /// Headset_StartCall
-    public struct HeadsetStartCall: CaseIterable {
+    public struct HeadsetStartCall: CaseIterable, Sendable {
         public static let categoryName = "Headset_StartCall"
 
         public let name: String
@@ -2054,7 +2054,7 @@ extension SystemSoundKey {
     }
 
     /// Headset_Redial
-    public struct HeadsetRedial: CaseIterable {
+    public struct HeadsetRedial: CaseIterable, Sendable {
         public static let categoryName = "Headset_Redial"
 
         public let name: String
@@ -2083,7 +2083,7 @@ extension SystemSoundKey {
     }
 
     /// Headset_AnswerCall
-    public struct HeadsetAnswerCall: CaseIterable {
+    public struct HeadsetAnswerCall: CaseIterable, Sendable {
         public static let categoryName = "Headset_AnswerCall"
 
         public let name: String
@@ -2112,7 +2112,7 @@ extension SystemSoundKey {
     }
 
     /// Headset_EndCall
-    public struct HeadsetEndCall: CaseIterable {
+    public struct HeadsetEndCall: CaseIterable, Sendable {
         public static let categoryName = "Headset_EndCall"
 
         public let name: String
@@ -2141,7 +2141,7 @@ extension SystemSoundKey {
     }
 
     /// Headset_CallWaitingActions
-    public struct HeadsetCallWaitingActions: CaseIterable {
+    public struct HeadsetCallWaitingActions: CaseIterable, Sendable {
         public static let categoryName = "Headset_CallWaitingActions"
 
         public let name: String
@@ -2170,7 +2170,7 @@ extension SystemSoundKey {
     }
 
     /// Headset_TransitionEnd
-    public struct HeadsetTransitionEnd: CaseIterable {
+    public struct HeadsetTransitionEnd: CaseIterable, Sendable {
         public static let categoryName = "Headset_TransitionEnd"
 
         public let name: String
@@ -2199,7 +2199,7 @@ extension SystemSoundKey {
     }
 
     /// Health_Alert
-    public struct HealthAlert: CaseIterable {
+    public struct HealthAlert: CaseIterable, Sendable {
         public static let categoryName = "Health_Alert"
 
         public let name: String
@@ -2228,7 +2228,7 @@ extension SystemSoundKey {
     }
 
     /// VCGroupInvitation_Alert
-    public struct VCGroupInvitationAlert: CaseIterable {
+    public struct VCGroupInvitationAlert: CaseIterable, Sendable {
         public static let categoryName = "VCGroupInvitation_Alert"
 
         public let name: String
@@ -2312,7 +2312,7 @@ extension SystemSoundKey {
     }
 
     /// IDCard_Sender_Confirmation
-    public struct IdCardSenderConfirmation: CaseIterable {
+    public struct IdCardSenderConfirmation: CaseIterable, Sendable {
         public static let categoryName = "IDCard_Sender_Confirmation"
 
         public let name: String
@@ -2344,7 +2344,7 @@ extension SystemSoundKey {
     }
 
     /// IDCard_Receiver_Confirmation
-    public struct IdCardReceiverConfirmation: CaseIterable {
+    public struct IdCardReceiverConfirmation: CaseIterable, Sendable {
         public static let categoryName = "IDCard_Receiver_Confirmation"
 
         public let name: String
@@ -2376,7 +2376,7 @@ extension SystemSoundKey {
     }
 
     /// IDCard_Receiver_Connect
-    public struct IdCardReceiverConnect: CaseIterable {
+    public struct IdCardReceiverConnect: CaseIterable, Sendable {
         public static let categoryName = "IDCard_Receiver_Connect"
 
         public let name: String
@@ -2452,7 +2452,7 @@ extension SystemSoundKey {
     }
 
     /// SystemSoundPreview_IgnoreRingerSwitch
-    public struct SystemSoundPreviewIgnoreRingerSwitch: CaseIterable {
+    public struct SystemSoundPreviewIgnoreRingerSwitch: CaseIterable, Sendable {
         public static let categoryName = "SystemSoundPreview_IgnoreRingerSwitch"
 
         public let name: String
@@ -2509,7 +2509,7 @@ extension SystemSoundKey {
     }
 
     /// SystemSoundPreview
-    public struct SystemSoundPreview: CaseIterable {
+    public struct SystemSoundPreview: CaseIterable, Sendable {
         public static let categoryName = "SystemSoundPreview"
 
         public let name: String
@@ -2545,7 +2545,7 @@ extension SystemSoundKey {
     }
 
     /// KeyPressClickPreview
-    public struct KeyPressClickPreview: CaseIterable {
+    public struct KeyPressClickPreview: CaseIterable, Sendable {
         public static let categoryName = "KeyPressClickPreview"
 
         public let name: String
@@ -2574,7 +2574,7 @@ extension SystemSoundKey {
     }
 
     /// SMSReceived_Selection
-    public struct SMSReceivedSelection: CaseIterable {
+    public struct SMSReceivedSelection: CaseIterable, Sendable {
         public static let categoryName = "SMSReceived_Selection"
 
         public let name: String
@@ -2757,7 +2757,7 @@ extension SystemSoundKey {
     }
 
     /// SystemSoundPreview_IgnoreRingerSwitch_NoVibe
-    public struct SystemSoundPreviewIgnoreRingerSwitchNoVibe: CaseIterable {
+    public struct SystemSoundPreviewIgnoreRingerSwitchNoVibe: CaseIterable, Sendable {
         public static let categoryName = "SystemSoundPreview_IgnoreRingerSwitch_NoVibe"
 
         public let name: String
@@ -2945,7 +2945,7 @@ extension SystemSoundKey {
     }
 
     /// PersonalTranslator
-    public struct PersonalTranslator: CaseIterable {
+    public struct PersonalTranslator: CaseIterable, Sendable {
         public static let categoryName = "PersonalTranslator"
 
         public let name: String
@@ -2995,7 +2995,7 @@ extension SystemSoundKey {
     }
 
     /// PaymentFailure
-    public struct PaymentFailure: CaseIterable {
+    public struct PaymentFailure: CaseIterable, Sendable {
         public static let categoryName = "PaymentFailure"
 
         public let name: String
@@ -3361,7 +3361,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_BatteryLow_Haptic
-    public struct AlertBatteryLowHaptic: CaseIterable {
+    public struct AlertBatteryLowHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_BatteryLow_Haptic"
 
         public let name: String
@@ -3390,7 +3390,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_BatteryCritical_Haptic
-    public struct AlertBatteryCriticalHaptic: CaseIterable {
+    public struct AlertBatteryCriticalHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_BatteryCritical_Haptic"
 
         public let name: String
@@ -3429,7 +3429,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_Mail_Haptic
-    public struct AlertMailHaptic: CaseIterable {
+    public struct AlertMailHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_Mail_Haptic"
 
         public let name: String
@@ -3458,7 +3458,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_Messages_1_Haptic
-    public struct AlertMessages1Haptic: CaseIterable {
+    public struct AlertMessages1Haptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_Messages_1_Haptic"
 
         public let name: String
@@ -3487,7 +3487,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_Messages_2_Haptic
-    public struct AlertMessages2Haptic: CaseIterable {
+    public struct AlertMessages2Haptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_Messages_2_Haptic"
 
         public let name: String
@@ -3516,7 +3516,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_Messages_3_Haptic
-    public struct AlertMessages3Haptic: CaseIterable {
+    public struct AlertMessages3Haptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_Messages_3_Haptic"
 
         public let name: String
@@ -3585,7 +3585,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_Voicemail_Haptic
-    public struct AlertVoicemailHaptic: CaseIterable {
+    public struct AlertVoicemailHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_Voicemail_Haptic"
 
         public let name: String
@@ -3654,7 +3654,7 @@ extension SystemSoundKey {
     }
 
     /// CameraShutter_Haptic
-    public struct CameraShutterHaptic: CaseIterable {
+    public struct CameraShutterHaptic: CaseIterable, Sendable {
         public static let categoryName = "CameraShutter_Haptic"
 
         public let name: String
@@ -4130,7 +4130,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_Mail_Salient_Haptic
-    public struct AlertMailSalientHaptic: CaseIterable {
+    public struct AlertMailSalientHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_Mail_Salient_Haptic"
 
         public let name: String
@@ -4159,7 +4159,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_Messages_1_Salient_Haptic
-    public struct AlertMessages1SalientHaptic: CaseIterable {
+    public struct AlertMessages1SalientHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_Messages_1_Salient_Haptic"
 
         public let name: String
@@ -4198,7 +4198,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_Voicemail_Salient_Haptic
-    public struct AlertVoicemailSalientHaptic: CaseIterable {
+    public struct AlertVoicemailSalientHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_Voicemail_Salient_Haptic"
 
         public let name: String
@@ -4317,7 +4317,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_BatteryCritical_Salient_Haptic
-    public struct AlertBatteryCriticalSalientHaptic: CaseIterable {
+    public struct AlertBatteryCriticalSalientHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_BatteryCritical_Salient_Haptic"
 
         public let name: String
@@ -4706,7 +4706,7 @@ extension SystemSoundKey {
     }
 
     /// WorkoutStartAutoDetected_Haptic
-    public struct WorkoutStartAutoDetectedHaptic: CaseIterable {
+    public struct WorkoutStartAutoDetectedHaptic: CaseIterable, Sendable {
         public static let categoryName = "WorkoutStartAutoDetected_Haptic"
 
         public let name: String
@@ -4735,7 +4735,7 @@ extension SystemSoundKey {
     }
 
     /// WorkoutCompleteAutoDetected_Haptic
-    public struct WorkoutCompleteAutoDetectedHaptic: CaseIterable {
+    public struct WorkoutCompleteAutoDetectedHaptic: CaseIterable, Sendable {
         public static let categoryName = "WorkoutCompleteAutoDetected_Haptic"
 
         public let name: String
@@ -4764,7 +4764,7 @@ extension SystemSoundKey {
     }
 
     /// WorkoutPausedAutoDetected_Haptic
-    public struct WorkoutPausedAutoDetectedHaptic: CaseIterable {
+    public struct WorkoutPausedAutoDetectedHaptic: CaseIterable, Sendable {
         public static let categoryName = "WorkoutPausedAutoDetected_Haptic"
 
         public let name: String
@@ -4793,7 +4793,7 @@ extension SystemSoundKey {
     }
 
     /// WorkoutResumedAutoDetected_Haptic
-    public struct WorkoutResumedAutoDetectedHaptic: CaseIterable {
+    public struct WorkoutResumedAutoDetectedHaptic: CaseIterable, Sendable {
         public static let categoryName = "WorkoutResumedAutoDetected_Haptic"
 
         public let name: String
@@ -4822,7 +4822,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_PaceAbove_Haptic
-    public struct AlertPaceAboveHaptic: CaseIterable {
+    public struct AlertPaceAboveHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_PaceAbove_Haptic"
 
         public let name: String
@@ -4851,7 +4851,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_PaceBelow_Haptic
-    public struct AlertPaceBelowHaptic: CaseIterable {
+    public struct AlertPaceBelowHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_PaceBelow_Haptic"
 
         public let name: String
@@ -4910,7 +4910,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_VCGroupInvitation_Haptic
-    public struct AlertVCGroupInvitationHaptic: CaseIterable {
+    public struct AlertVCGroupInvitationHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_VCGroupInvitation_Haptic"
 
         public let name: String
@@ -4939,7 +4939,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_Critical_Haptic
-    public struct AlertCriticalHaptic: CaseIterable {
+    public struct AlertCriticalHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_Critical_Haptic"
 
         public let name: String
@@ -4968,7 +4968,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_FirstParty_Haptic
-    public struct AlertFirstPartyHaptic: CaseIterable {
+    public struct AlertFirstPartyHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_FirstParty_Haptic"
 
         public let name: String
@@ -4997,7 +4997,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_HealthNotificationUrgent_Haptic
-    public struct AlertHealthNotificationUrgentHaptic: CaseIterable {
+    public struct AlertHealthNotificationUrgentHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_HealthNotificationUrgent_Haptic"
 
         public let name: String
@@ -5131,7 +5131,7 @@ extension SystemSoundKey {
     }
 
     /// HeadphoneAudioExposureLimitExceeded_Haptic
-    public struct HeadphoneAudioExposureLimitExceededHaptic: CaseIterable {
+    public struct HeadphoneAudioExposureLimitExceededHaptic: CaseIterable, Sendable {
         public static let categoryName = "HeadphoneAudioExposureLimitExceeded_Haptic"
 
         public let name: String
@@ -5182,7 +5182,7 @@ extension SystemSoundKey {
     }
 
     /// PushToTalkJoined_Haptic
-    public struct PushToTalkJoinedHaptic: CaseIterable {
+    public struct PushToTalkJoinedHaptic: CaseIterable, Sendable {
         public static let categoryName = "PushToTalkJoined_Haptic"
 
         public let name: String
@@ -5214,7 +5214,7 @@ extension SystemSoundKey {
     }
 
     /// PushToTalkLeft_Haptic
-    public struct PushToTalkLeftHaptic: CaseIterable {
+    public struct PushToTalkLeftHaptic: CaseIterable, Sendable {
         public static let categoryName = "PushToTalkLeft_Haptic"
 
         public let name: String
@@ -5246,7 +5246,7 @@ extension SystemSoundKey {
     }
 
     /// PushToTalkUnmute_Haptic
-    public struct PushToTalkUnmuteHaptic: CaseIterable {
+    public struct PushToTalkUnmuteHaptic: CaseIterable, Sendable {
         public static let categoryName = "PushToTalkUnmute_Haptic"
 
         public let name: String
@@ -5278,7 +5278,7 @@ extension SystemSoundKey {
     }
 
     /// PushToTalkMute_Haptic
-    public struct PushToTalkMuteHaptic: CaseIterable {
+    public struct PushToTalkMuteHaptic: CaseIterable, Sendable {
         public static let categoryName = "PushToTalkMute_Haptic"
 
         public let name: String
@@ -5310,7 +5310,7 @@ extension SystemSoundKey {
     }
 
     /// PushToTalkUnmuteFail_Haptic
-    public struct PushToTalkUnmuteFailHaptic: CaseIterable {
+    public struct PushToTalkUnmuteFailHaptic: CaseIterable, Sendable {
         public static let categoryName = "PushToTalkUnmuteFail_Haptic"
 
         public let name: String
@@ -5353,7 +5353,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_IntervalEnded_Haptic
-    public struct AlertIntervalEndedHaptic: CaseIterable {
+    public struct AlertIntervalEndedHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_IntervalEnded_Haptic"
 
         public let name: String
@@ -5385,7 +5385,7 @@ extension SystemSoundKey {
     }
 
     /// Alert_IntervalUpcoming_Haptic
-    public struct AlertIntervalUpcomingHaptic: CaseIterable {
+    public struct AlertIntervalUpcomingHaptic: CaseIterable, Sendable {
         public static let categoryName = "Alert_IntervalUpcoming_Haptic"
 
         public let name: String
@@ -5417,7 +5417,7 @@ extension SystemSoundKey {
     }
 
     /// Elevation_Alert_Haptic
-    public struct ElevationAlertHaptic: CaseIterable {
+    public struct ElevationAlertHaptic: CaseIterable, Sendable {
         public static let categoryName = "Elevation_Alert_Haptic"
 
         public let name: String
@@ -5449,7 +5449,7 @@ extension SystemSoundKey {
     }
 
     /// IDCard_Sender_Confirmation_Haptic
-    public struct IdCardSenderConfirmationHaptic: CaseIterable {
+    public struct IdCardSenderConfirmationHaptic: CaseIterable, Sendable {
         public static let categoryName = "IDCard_Sender_Confirmation_Haptic"
 
         public let name: String
@@ -5481,7 +5481,7 @@ extension SystemSoundKey {
     }
 
     /// IDCard_Receiver_Confirmation_Haptic
-    public struct IdCardReceiverConfirmationHaptic: CaseIterable {
+    public struct IdCardReceiverConfirmationHaptic: CaseIterable, Sendable {
         public static let categoryName = "IDCard_Receiver_Confirmation_Haptic"
 
         public let name: String
@@ -5513,7 +5513,7 @@ extension SystemSoundKey {
     }
 
     /// IDCard_Receiver_Connect_Haptic
-    public struct IdCardReceiverConnectHaptic: CaseIterable {
+    public struct IdCardReceiverConnectHaptic: CaseIterable, Sendable {
         public static let categoryName = "IDCard_Receiver_Connect_Haptic"
 
         public let name: String
@@ -5545,7 +5545,7 @@ extension SystemSoundKey {
     }
 
     /// Satellite_Message_Sent_Haptic
-    public struct SatelliteMessageSentHaptic: CaseIterable {
+    public struct SatelliteMessageSentHaptic: CaseIterable, Sendable {
         public static let categoryName = "Satellite_Message_Sent_Haptic"
 
         public let name: String
