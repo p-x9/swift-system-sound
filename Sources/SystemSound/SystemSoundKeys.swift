@@ -46,7 +46,9 @@ extension SystemSoundKey {
         public let kind: SystemSoundKind
 
         public static var allCases: [Self] {
-            [.ringbackToneAnsi, .ringbackToneCept, .busyToneAnsi, .busyToneCept, .callWaitingToneAnsi, .callWaitingToneCept, .endCallToneCept, .ringbackToneHk, .ringbackToneAus, .ringbackToneUk, .multiwayJoin, .multiwayLeave, .micMute, .micUnmute, .micUnmuteFail, .screenSharingStarted]
+            var result: [Self] = [.ringbackToneAnsi, .ringbackToneCept, .busyToneAnsi, .busyToneCept, .callWaitingToneAnsi, .callWaitingToneCept, .endCallToneCept, .ringbackToneHk, .ringbackToneAus, .ringbackToneUk, .multiwayJoin, .multiwayLeave, .micMute, .micUnmute, .micUnmuteFail, .screenSharingStarted]
+            if #available(iOS 27, *) { result.append(.callWaitingToneLowPriority) }
+            return result
         }
 
         /// ringback_tone_ansi (InCallSystemSound)
@@ -117,6 +119,14 @@ extension SystemSoundKey {
         public static let ringbackToneUk: Self = .init(
             name: "ringback_tone_uk",
             id: 39,
+            kind: .nano
+        )
+
+        /// call_waiting_tone_low_priority (InCallSystemSound)
+        @available(iOS 27, *)
+        public static let callWaitingToneLowPriority: Self = .init(
+            name: "call_waiting_tone_low_priority",
+            id: 40,
             kind: .nano
         )
 
@@ -1907,6 +1917,56 @@ extension SystemSoundKey {
         )
     }
 
+    /// GymKit
+    public struct GymKit: CaseIterable, Sendable {
+        public static let categoryName = "GymKit"
+
+        public let name: String
+        public let id: Int
+        public let kind: SystemSoundKind
+
+        public static var allCases: [Self] {
+            var result: [Self] = []
+            if #available(iOS 27, *) {
+                result.append(contentsOf: [.gymKitConnecting, .gymKitConnected, .gymKitDisconnected])
+            }
+            return result
+        }
+
+        /// GymKitConnecting (GymKit)
+        @available(iOS 27, *)
+        public static let gymKitConnecting: Self = .init(
+            name: "GymKitConnecting",
+            id: 1176,
+            kind: .default
+        )
+
+        /// GymKitConnected (GymKit)
+        @available(iOS 27, *)
+        public static let gymKitConnected: Self = .init(
+            name: "GymKitConnected",
+            id: 1177,
+            kind: .default
+        )
+
+        /// GymKitDisconnected (GymKit)
+        @available(iOS 27, *)
+        public static let gymKitDisconnected: Self = .init(
+            name: "GymKitDisconnected",
+            id: 1178,
+            kind: .default
+        )
+    }
+
+    public static func gymKit(_ soundId: GymKit) -> SystemSoundKey {
+        .init(
+            name: soundId.name,
+            id: soundId.id,
+            category: GymKit.categoryName,
+            kind: soundId.kind
+        )
+    }
+
     /// TouchTone
     public struct TouchTone: CaseIterable, Sendable {
         public static let categoryName = "TouchTone"
@@ -2940,6 +3000,17 @@ extension SystemSoundKey {
             name: "NavigationGenericManeuver",
             id: 1370,
             category: "NavigationGenericManeuver",
+            kind: .default
+        )
+    }
+
+    ///  (HomeDeviceHourlyChime)
+    @available(iOS 27, *)
+    public static var homeDeviceHourlyChime: SystemSoundKey {
+        .init(
+            name: "",
+            id: 1381,
+            category: "HomeDeviceHourlyChime",
             kind: .default
         )
     }
@@ -5789,6 +5860,7 @@ extension SystemSoundKey {
         VCCallUpgrade.allCases.map({ .vcCallUpgrade($0) }) +
         PaymentSuccess.allCases.map({ .paymentSuccess($0) }) +
         CriticalAlert.allCases.map({ .criticalAlert($0) }) +
+        GymKit.allCases.map({ .gymKit($0) }) +
         TouchTone.allCases.map({ .touchTone($0) }) +
         HeadsetStartCall.allCases.map({ .headsetStartCall($0) }) +
         HeadsetRedial.allCases.map({ .headsetRedial($0) }) +
@@ -5844,6 +5916,9 @@ extension SystemSoundKey {
         IdCardReceiverConnectHaptic.allCases.map({ .idCardReceiverConnectHaptic($0) }) +
         SatelliteMessageSentHaptic.allCases.map({ .satelliteMessageSentHaptic($0) }) +
         [connectPower, mediaPaused, mediaHandoff, acknowledgmentSent, acknowledgmentReceived, lowPower, failedUnlock, jblBegin, jblConfirm, jblCancel, jblAmbiguous, jblNoMatch, focusChangeKeyboard, focusChangeAppIcon, focusChangeLarge, focusChangeSmall, navigationPush, navigationPop, keyboardPressNormal, keyboardPressDelete, keyboardPressClear, vcInvitationAccepted, vcRinging, vcEnded, goToSleepAlert, warsaw, pearlSuccess, pearlFailure, usbHardeningAlert, paymentReceived, ringerVibeChanged, silentVibeChanged, vibrateAlways, headphoneAudioExposureLimitExceeded, healthNotificationUrgent, navigationGenericManeuver, notificationHaptic, ringtoneUSHaptic, ringtoneUKHaptic, alarmHaptic, siriStartHaptic, siriStopSuccessHaptic, siriStopFailureHaptic, stockholmHaptic, beatHaptic, rubberBandHaptic, doNotDisturbHaptic, uiConfirmationHaptic, etHeartbeatHaptic, timerHaptic, navigationLeftTurnHaptic, navigationRightTurnHaptic, detentHaptic, navigationGenericManeuverHaptic, cameraCountdownTickHaptic, cameraCountdownImminentHaptic, etRemoteTapReceiveHaptic, etRemoteTapSendHaptic, etBeginNotificationHaptic, doNotDisturbExpiryWarningHaptic, stockholmActiveHaptic, stockholmActiveSingleCycleHaptic, stockholmFailureHaptic, sedentaryTimerHaptic, hourlyChimeHaptic, previewAudioAndHaptic, alertActivityGoalAttainedHaptic, alertActivityGoalBehindHaptic, alertActivityGoalCloseHaptic, alertCalendarHaptic, alertPassbookBalanceHaptic, alertPassbookGeofenceHaptic, alertPhotostreamActivityHaptic, alertReminderDueHaptic, alertWalkieTalkieHaptic, batteryMagsafeHaptic, buddyPairingFailureHaptic, buddyPairingSuccessHaptic, alertMapsDirectionsInAppHaptic, messagesIncomingHaptic, messagesOutgoingHaptic, onOffPasscodeFailureHaptic, orbInvokeHaptic, orbLayersHaptic, phoneHangUpHaptic, photosZoomDetentHaptic, qbDictationHaptic, springboardEdgeUniverseHaptic, springboardHardStopHaptic, stopwatchLapHaptic, stopwatchResetHaptic, stopwatchStartHaptic, stopwatchStopHaptic, timerCancelHaptic, timerPauseHaptic, timerStartHaptic, timerWheelHoursDetentHaptic, walkieTalkieActiveStartHaptic, workoutCompleteHaptic, workoutCountdownHaptic, alert3rdPartyHaptic, workoutSelectHaptic, workoutPressStartHaptic, clockAnalogTickHaptic, timerWheelMinutesDetentHaptic, phoneAnswerHaptic, phoneHoldHaptic, walkieTalkieActiveEndHaptic, uiSnapHaptic, uiSwitchOnHaptic, uiSwitchOffHaptic, uiSwipeHaptic, systemStartupHaptic, buddyPairingRemoteConnectionHaptic, buddyPairingRemoteTapHaptic, qbDictationOffHaptic, ringtoneDuckedUSHaptic, ringtoneDuckedUKHaptic, salientNotificationHaptic, notificationSalientHaptic, etBeginNotificationSalientHaptic, alertCalendarSalientHaptic, alertReminderDueSalientHaptic, alert3rdPartySalientHaptic, _3rdPartyDirectionUpHaptic, _3rdPartyDirectionDownHaptic, _3rdPartySuccessHaptic, _3rdPartyFailureHaptic, _3rdPartyRetryHaptic, _3rdPartyStartHaptic, _3rdPartyStopHaptic, alarmNightstandHaptic, navigationLeftTurnSalientHaptic, navigationRightTurnSalientHaptic, navigationGenericManeuverSalientHaptic, sedentaryTimerSalientHaptic, alertActivityGoalAttainedSalientHaptic, alertActivityGoalBehindSalientHaptic, alertPassbookGeofenceSalientHaptic, workoutSavedHaptic, orbPeekHaptic, orbPopHaptic, orbNegativeHaptic, voiceOverClickHaptic, siriAutoSendHaptic, hummingbirdCycleHaptic, hummingbirdCompletionHaptic, hummingbirdNotificationHaptic, remoteCameraShutterBurstBeginHaptic, remoteCameraShutterBurstEndHaptic, workoutPausedHaptic, workoutResumedHaptic, goToSleepHaptic, warsawHaptic, autoUnlockHaptic, alertActivityFriendsGoalAttainedHaptic, alertSpartanConnectingHaptic, alertSpartanConnectingLowLatencyHaptic, alertSpartanConnectedLowLatencyHaptic, alertSpartanDisconnectedLowLatencyHaptic, alertSpartanReminderEscalationLevel1Haptic, alertSpartanReminderEscalationLevel2Haptic, alertSpartanReminderEscalationLevel3Haptic, alertSpartanReminderEscalationLevel4Haptic, accessScanCompleteHaptic, buddyMigrationStartHaptic, sosFallDetectionPromptHaptic, sosEmergencyContactTextPromptHaptic, walkieTalkieReceiveStartHaptic, walkieTalkieReceiveEndHaptic, alertHealthHaptic, systemNotificationHaptic, sosFallDetectionPromptEscalationHaptic, walkAMileHaptic, healthReadingCompleteHaptic, healthReadingFailHaptic, vibrate]
+        if #available(iOS 27, *) {
+            result.append(.homeDeviceHourlyChime)
+        }
         if #available(iOS 26, *) {
             result.append(.photoShutter)
         }
