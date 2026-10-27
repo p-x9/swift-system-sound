@@ -10,6 +10,7 @@
 | 37 | ringback_tone_hk.caf | InCallSystemSound | nano | |
 | 38 | ringback_tone_aus.caf | InCallSystemSound | nano | |
 | 39 | ringback_tone_uk.caf | InCallSystemSound | nano | |
+| 40 | call_waiting_tone_low_priority.caf | InCallSystemSound | nano | iOS27~ |
 | 1000 | new-mail.caf | MailReceived | default | |
 | 1001 | mail-sent.caf | MailSent | default | |
 | 1002 | sms-received1.caf | VoicemailReceived | nano | |
@@ -118,6 +119,9 @@
 | 1169 | EarInteraction_Complete.caf | EarInteraction_Complete | default | iOS18.1~ |
 | 1174 | - | Time_To_Run | - | iOS16~ |
 | 1175 | - | Time_To_Walk | - | iOS16~ |
+| 1176 | GymKitConnecting.caf | GymKit | default | iOS27~ |
+| 1177 | GymKitConnected.caf | GymKit | default | iOS27~ |
+| 1178 | GymKitDisconnected.caf | GymKit | default | iOS27~ |
 | 1200 | dtmf-0.caf | TouchTone | nano | |
 | 1201 | dtmf-1.caf | TouchTone | nano | |
 | 1202 | dtmf-2.caf | TouchTone | nano | |
@@ -217,6 +221,7 @@
 | 1372 | HeadGesturesDoubleShake.caf | - | nano | iOS18~ |
 | 1373 | HeadGesturesPartialNod.caf | - | nano | iOS18~ |
 | 1374 | HeadGesturesPartialShake.caf | - | nano | iOS18~ |
+| 1381 | - | HomeDeviceHourlyChime | - | iOS27~ |
 | 1390 | LiveTranslationStart.caf | PersonalTranslator | default | iOS26~ |
 | 1391 | LiveTranslationStop.caf | PersonalTranslator | default | iOS26~ |
 | 1392 | DualBudLongPressFailure.caf | PersonalTranslator | default | iOS26~ |
